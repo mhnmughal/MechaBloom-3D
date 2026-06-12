@@ -80,26 +80,30 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Foundation. Repo + documentation established.
+**Phase:** Scene and script foundation.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
 - [x] Documentation files created (README, MEMORY_BANK, DEVELOPMENT_LOG, LICENSE_NOTES, ATTRIBUTION, CHANGELOG).
-- [ ] C# gameplay scripts.
-- [ ] Materials + scene foundation (camera, light, environment, audio, managers).
-- [ ] Manual UI canvas + panels.
-- [ ] 12 manual levels.
-- [ ] Reference wiring, audio placeholders, QA.
+- [x] C# gameplay script foundation under `Assets/Scripts/`.
+- [x] `GameScene.unity` created as an editor-assembled manual scene.
+- [x] Materials + scene foundation (camera, light, environment, audio, managers).
+- [x] Manual UI canvas + required panels, 12 level buttons, and settings sliders.
+- [x] 12 manual level parents with required subgroup hierarchy and `LevelConfig` components.
+- [ ] Full per-level puzzle tuning and serialized reference polish.
+- [ ] Complete flow graph logic, undo stack, tutorial progression, audio clips, and QA.
 
 ## KNOWN ISSUES
 
-- Scene `GameScene.unity` not yet created (current active scene is the template `SampleScene`).
-- No gameplay scripts compiled yet.
+- Current flow calculation is a foundation pass: it validates sources and blooms matching beds, but it is not yet a tile-by-tile routed graph with direction-pair loop protection.
+- Undo currently exposes the UI entry point and feedback, but does not yet restore a serialized action stack.
+- The 12 levels exist manually with placeholder primitives and mechanic markers; they still need final puzzle-specific tuning and visual polish.
+- Real CC0 audio files are not added yet; the scene uses documented AudioSource placeholders.
 
 ## NEXT TASKS
 
-1. Author all C# scripts under `Assets/Scripts/` and confirm zero compile errors.
-2. Create materials and the scene foundation (Main Camera, Directional Light, Environment, Audio, Managers, Effects, SharedGameplayObjects).
-3. Build the manual UI canvas and all panels with SafeAreaHandler.
-4. Build the 12 manual levels with LevelConfig.
-5. Wire serialized references + OnClick events, add audio placeholders, run the QA checklist.
+1. Replace the foundation flow pass with a tile-by-tile routed graph that respects gear orientation, valve state, blockers, splitters, and visited direction pairs.
+2. Implement the real undo stack for gear/valve/core state plus action count restoration.
+3. Tune each of the 12 manual levels into distinct solvable puzzles and wire remaining UI buttons.
+4. Add or generate documented CC0/self-authored placeholder audio clips.
+5. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.

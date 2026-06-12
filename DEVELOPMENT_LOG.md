@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-12 - Manual scene and script foundation
+
+- **Change summary:** Added the core MechaBloom 3D C# script foundation and created an editor-assembled `GameScene.unity` with the required manual hierarchy, visible environment primitives, 12 level parents, LevelConfig components, manager objects, UI panels, level buttons, settings sliders, audio source placeholders, camera, light, effects, and materials.
+- **Files / systems touched:** `Assets/Scripts/`, `Assets/Scenes/GameScene.unity`, `Assets/Materials/`, TextMeshPro project import, Unity package/settings changes, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: active scene is `Assets/Scenes/GameScene.unity`; C# compilation has 0 errors; hierarchy spot-check has no missing required paths; exactly 1 active Audio Listener; 12 `LevelConfig` components exist; level select contains 12 level buttons plus a back button.
+- **Known risks:** Flow logic is still a foundation pass rather than the final routed graph. Undo only has the UI entry point/feedback. Levels are manually present but still use placeholder puzzle layouts and need tuning before publish readiness.
+- **Next planned step:** Implement routed flow traversal and real undo state restoration, then tune Level_01 through Level_03 into fully playable puzzles.
+
+---
+
 ## 2026-06-12 — Project documentation & repo verification
 
 - **Change summary:** Verified the private GitHub repository, Unity project, and `.gitignore`; created the required documentation set.

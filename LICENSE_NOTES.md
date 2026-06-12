@@ -43,6 +43,12 @@ All SFX are **named placeholder slots** until verified CC0 files are added. No r
 |-------|--------|--------|---------|----------------|----------------------|-------|
 | (none) | — | — | — | — | — | All visuals use Unity primitives + self-authored URP materials (solid colours/emission). No imported textures. |
 
+## Materials
+
+| Asset | Source | Author | Licence | Commercial use | Attribution required | Notes |
+|-------|--------|--------|---------|----------------|----------------------|-------|
+| MechaBloom 3D solid-colour URP materials | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Yes | No | Includes floor, tile, gear, pipe, valve, water, energy, plant, blocker, splitter, core, and UI panel materials. |
+
 ## Models / Prefabs
 
 | Asset | Source | Author | Licence | Notes |
