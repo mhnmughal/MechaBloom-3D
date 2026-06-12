@@ -6,6 +6,7 @@ namespace MechaBloom
     {
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private UIManager uiManager;
+        [SerializeField] private AudioManager audioManager;
 
         private bool paused;
 
@@ -20,6 +21,7 @@ namespace MechaBloom
         {
             paused = false;
             Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
             uiManager?.ShowLevelSelect();
         }
 
@@ -27,6 +29,7 @@ namespace MechaBloom
         {
             paused = false;
             Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
             uiManager?.ShowMainMenu();
         }
 
@@ -34,6 +37,7 @@ namespace MechaBloom
         {
             paused = true;
             Time.timeScale = 0f;
+            audioManager?.PlayUIButton();
             uiManager?.ShowPause(true);
         }
 
@@ -41,6 +45,7 @@ namespace MechaBloom
         {
             paused = false;
             Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
             uiManager?.ShowPause(false);
         }
 

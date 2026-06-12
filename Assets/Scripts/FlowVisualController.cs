@@ -12,7 +12,38 @@ namespace MechaBloom
 
         public void SetActive(bool active)
         {
-            // Visual playback is intentionally deferred to a gameplay milestone.
+            if (flowVisuals != null)
+            {
+                foreach (var visual in flowVisuals)
+                {
+                    if (visual != null)
+                    {
+                        visual.SetActive(active);
+                    }
+                }
+            }
+
+            if (flowParticles == null)
+            {
+                return;
+            }
+
+            foreach (var particle in flowParticles)
+            {
+                if (particle == null)
+                {
+                    continue;
+                }
+
+                if (active)
+                {
+                    particle.Play();
+                }
+                else
+                {
+                    particle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                }
+            }
         }
     }
 }

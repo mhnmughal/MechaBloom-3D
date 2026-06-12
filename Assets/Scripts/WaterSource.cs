@@ -11,5 +11,10 @@ namespace MechaBloom
         public GardenTile Tile => tile;
         public GridDirection OutputDirection => outputDirection;
         public bool Active => active;
+
+        public void SetRuntimeTile(GardenTile runtimeTile)
+        {
+            tile = runtimeTile;
+        }
     }
 }

@@ -14,16 +14,17 @@ All notable changes to this project are documented here. Format loosely follows 
 - Requested gameplay materials for gears, pipes, valves, water, energy, plant beds, cores, blockers, and splitters.
 - Manual `Level_01` through `Level_06` scene layouts with LevelConfig objective, hint, tutorial text, and mechanic-specific objects.
 - Manual `Level_07` through `Level_12` scene layouts for flow matching, limited actions, broken gear, locked root, mixed systems, and final challenge mechanics.
+- Gameplay systems integration: water/energy flow traversal, splitter and blocker handling, plant blooming, locked root unlocks, win/loss, undo, hints, save/unlock, star ratings, touch/mobile input, UI updates, and audio hooks.
 
 ### Changed
 - Advanced the project from documentation-only foundation to a compiled Unity scene/script foundation.
-- Deferred early gameplay behavior from flow, plant, gear, valve, touch action, and star systems so the current code remains architecture-only.
+- Advanced the code from architecture-only placeholders to integrated gameplay behavior driven by existing scene objects.
 
 ### Notes
 - Environment verified: Unity 6000.4.6f1 (URP), GitHub CLI authenticated, repo confirmed PRIVATE.
-- Gameplay systems are not implemented yet; routed flow, object state changes, flow matching, action limits, broken gear enforcement, locked root unlocking, undo restoration, audio clips, and final level tuning remain.
+- Gameplay systems are implemented, but full play-mode QA, level tuning, mobile polish, and real placeholder audio clips remain.
 - Prefabs use Unity primitive meshes only; no paid assets or external models are used.
-- Levels 01-12 are present before Play, but playability still depends on future gameplay implementation.
+- Levels 01-12 are present before Play and connected to gameplay systems; final playability depends on tuning and QA.
 
 ---
 

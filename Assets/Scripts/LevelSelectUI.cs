@@ -7,6 +7,7 @@ namespace MechaBloom
     {
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private SaveManager saveManager;
+        [SerializeField] private AudioManager audioManager;
         [SerializeField] private Button[] levelButtons;
         [SerializeField] private GameObject[] lockOverlays;
 
@@ -19,9 +20,11 @@ namespace MechaBloom
         {
             if (saveManager != null && levelNumber > saveManager.HighestUnlockedLevel)
             {
+                audioManager?.PlayWrongAction();
                 return;
             }
 
+            audioManager?.PlayUIButton();
             levelManager?.LoadLevel(levelNumber);
         }
 

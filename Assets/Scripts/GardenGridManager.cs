@@ -40,5 +40,38 @@ namespace MechaBloom
 
             return tileLookup.TryGetValue(position, out tile);
         }
+
+        public void UseLevel(LevelConfig level)
+        {
+            tiles = level != null ? level.GetComponentsInChildren<GardenTile>(true) : null;
+            RebuildLookup();
+        }
+
+        public GardenTile GetNearestTile(Vector3 worldPosition)
+        {
+            if (tileLookup.Count == 0)
+            {
+                RebuildLookup();
+            }
+
+            GardenTile nearest = null;
+            var nearestDistance = float.MaxValue;
+            foreach (var tile in tileLookup.Values)
+            {
+                if (tile == null)
+                {
+                    continue;
+                }
+
+                var distance = (tile.transform.position - worldPosition).sqrMagnitude;
+                if (distance < nearestDistance)
+                {
+                    nearest = tile;
+                    nearestDistance = distance;
+                }
+            }
+
+            return nearest;
+        }
     }
 }

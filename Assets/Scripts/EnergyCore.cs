@@ -9,15 +9,38 @@ namespace MechaBloom
         [SerializeField] private Material activeMaterial;
         [SerializeField] private Material inactiveMaterial;
 
+        private bool active;
+
         public bool StartsActive => startsActive;
         public Renderer CoreRenderer => coreRenderer;
         public Material ActiveMaterial => activeMaterial;
         public Material InactiveMaterial => inactiveMaterial;
+        public bool Active => active;
         public override bool CanActivate => true;
+
+        private void Awake()
+        {
+            ResetState();
+        }
 
         public override bool Activate()
         {
-            return false;
+            SetActive(!active);
+            return true;
+        }
+
+        public override void ResetState()
+        {
+            SetActive(startsActive);
+        }
+
+        public void SetActive(bool value)
+        {
+            active = value;
+            if (coreRenderer != null)
+            {
+                coreRenderer.sharedMaterial = active ? activeMaterial : inactiveMaterial;
+            }
         }
     }
 }

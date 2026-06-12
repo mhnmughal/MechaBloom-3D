@@ -7,18 +7,34 @@ namespace MechaBloom
         [SerializeField] private bool startsLocked = true;
         [SerializeField] private GameObject rootVisual;
 
+        private bool locked;
+
         public bool StartsLocked => startsLocked;
         public GameObject RootVisual => rootVisual;
-        public bool Locked => startsLocked;
+        public bool Locked => locked;
+
+        private void Awake()
+        {
+            ResetState();
+        }
 
         public void Unlock()
         {
-            // Lock state changes are intentionally deferred to gameplay.
+            SetLocked(false);
         }
 
         public void ResetState()
         {
-            // Lock state changes are intentionally deferred to gameplay.
+            SetLocked(startsLocked);
+        }
+
+        public void SetLocked(bool value)
+        {
+            locked = value;
+            if (rootVisual != null)
+            {
+                rootVisual.SetActive(locked);
+            }
         }
     }
 }

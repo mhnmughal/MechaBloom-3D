@@ -47,7 +47,15 @@ namespace MechaBloom
 
         public void SetStars(int levelNumber, int stars)
         {
-            PlayerPrefs.SetInt(GetStarsKey(levelNumber), Mathf.Clamp(stars, 0, 3));
+            var bestStars = Mathf.Max(GetStars(levelNumber), Mathf.Clamp(stars, 0, 3));
+            PlayerPrefs.SetInt(GetStarsKey(levelNumber), bestStars);
+            PlayerPrefs.Save();
+        }
+
+        public void UnlockLevel(int levelNumber)
+        {
+            HighestUnlockedLevel = Mathf.Max(HighestUnlockedLevel, levelNumber);
+            PlayerPrefs.Save();
         }
 
         public void ResetProgress()

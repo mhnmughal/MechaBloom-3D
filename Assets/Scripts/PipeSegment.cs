@@ -18,7 +18,19 @@ namespace MechaBloom
 
         public void SetFlowActive(bool active)
         {
-            // Flow visuals are intentionally deferred to a gameplay milestone.
+            var material = active ? activeMaterial : inactiveMaterial;
+            if (material == null || renderers == null)
+            {
+                return;
+            }
+
+            foreach (var targetRenderer in renderers)
+            {
+                if (targetRenderer != null)
+                {
+                    targetRenderer.sharedMaterial = material;
+                }
+            }
         }
     }
 }

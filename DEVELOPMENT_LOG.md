@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-12 - Gameplay systems integration
+
+- **Change summary:** Implemented the main MechaBloom 3D gameplay layer against existing scene objects: routed water/energy flow, splitter routing, blocker/locked-root checks, plant blooming, action limits, win/loss handling, undo snapshots, hints, PlayerPrefs saves/unlocks/stars, touch/mouse selection, mobile Rotate/Activate hooks, UI updates, and audio trigger calls.
+- **Files / systems touched:** `Assets/Scripts/` gameplay, manager, input, UI, audio, save, hint, undo, and flow scripts; `Assets/Scenes/GameScene.unity` manager reference wiring; `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: C# compilation has 0 errors; scene is saved/not dirty; manager references are wired except optional placeholder audio clips; forbidden scan found no `GameObject.Find`, `FindObjectOfType`, `Resources.Load`, runtime `Instantiate`, runtime `CreatePrimitive`, runtime `new GameObject`, or runtime `AddComponent` in `Assets/Scripts`. Editor smoke tested Level 01 flow recalculation and Level 08 rotate/undo state restoration.
+- **Known risks:** Full play-mode QA is still required. The new flow model uses tile adjacency and quarter-turn gear elbows, so several manual levels may need orientation/layout/action-limit tuning. Audio clip slots remain empty documented placeholders.
+- **Next planned step:** Run hands-on play-mode QA and tune all 12 level layouts against the implemented rules.
+
+---
+
 ## 2026-06-12 - Manual Levels 07-12
 
 - **Change summary:** Manually rebuilt `Level_07` through `Level_12` inside `GameScene.unity` using existing Unity primitive prefab assets and scene hierarchy groups. The new level layouts introduce flow matching, limited actions, broken gear, locked root, mixed systems, and final challenge mechanics with serialized `LevelConfig` objective text, hint text, tutorial text, limits, required bloom count, and scene-object references.

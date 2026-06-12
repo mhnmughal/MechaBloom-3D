@@ -6,6 +6,7 @@ namespace MechaBloom
     {
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private FeedbackTextUI feedbackTextUI;
+        [SerializeField] private AudioManager audioManager;
 
         public void ShowHint()
         {
@@ -17,6 +18,7 @@ namespace MechaBloom
 
             levelManager.MarkHintUsed();
             feedbackTextUI?.Show(level.HintText);
+            audioManager?.PlayHint();
         }
     }
 }

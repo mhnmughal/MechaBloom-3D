@@ -7,5 +7,6 @@ namespace MechaBloom
         [SerializeField] private int maxRotations = 2;
 
         public int MaxRotations => maxRotations;
+        public override bool CanRotate => RotationsUsed < maxRotations;
     }
 }

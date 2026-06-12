@@ -49,12 +49,16 @@ namespace MechaBloom
         public void ShowLevelComplete(string summary)
         {
             levelCompleteSummaryText?.SetText(summary);
+            SetActive(gameOverPanel, false);
+            SetActive(pausePanel, false);
             SetActive(levelCompletePanel, true);
         }
 
         public void ShowGameOver(string reason)
         {
             failureReasonText?.SetText(reason);
+            SetActive(levelCompletePanel, false);
+            SetActive(pausePanel, false);
             SetActive(gameOverPanel, true);
         }
 

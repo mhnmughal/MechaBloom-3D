@@ -8,11 +8,18 @@ namespace MechaBloom
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private UIManager uiManager;
         [SerializeField] private TMP_Text tutorialMessageText;
+        [SerializeField] private SaveManager saveManager;
 
         private int messageIndex;
 
         public void BeginTutorial()
         {
+            if (saveManager != null && saveManager.TutorialSeen && levelManager != null && levelManager.ActiveLevel != null && levelManager.ActiveLevel.LevelNumber > 1)
+            {
+                uiManager?.ShowTutorial(false);
+                return;
+            }
+
             messageIndex = 0;
             uiManager?.ShowTutorial(true);
             ShowCurrentMessage();
@@ -26,6 +33,11 @@ namespace MechaBloom
 
         public void Skip()
         {
+            if (saveManager != null)
+            {
+                saveManager.TutorialSeen = true;
+            }
+
             uiManager?.ShowTutorial(false);
         }
 
@@ -34,6 +46,11 @@ namespace MechaBloom
             var messages = levelManager != null && levelManager.ActiveLevel != null ? levelManager.ActiveLevel.TutorialMessages : null;
             if (messages == null || messageIndex >= messages.Length)
             {
+                if (saveManager != null)
+                {
+                    saveManager.TutorialSeen = true;
+                }
+
                 uiManager?.ShowTutorial(false);
                 return;
             }

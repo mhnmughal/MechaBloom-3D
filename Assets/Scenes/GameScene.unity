@@ -8529,6 +8529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MechaBloom.LevelSelectUI
   levelManager: {fileID: 1121899622}
   saveManager: {fileID: 1889141174}
+  audioManager: {fileID: 1258100684}
   levelButtons:
   - {fileID: 846029827}
   - {fileID: 1813877060}
@@ -98575,6 +98576,14 @@ MonoBehaviour:
   - {fileID: 1613974292}
   uiManager: {fileID: 658916693}
   flowPathCalculator: {fileID: 1232051755}
+  undoManager: {fileID: 1629166314}
+  saveManager: {fileID: 1889141174}
+  starRatingManager: {fileID: 1611872643}
+  audioManager: {fileID: 1258100684}
+  tutorialManager: {fileID: 1867697129}
+  levelSelectUI: {fileID: 73966447}
+  feedbackTextUI: {fileID: 329735766}
+  cameraShake: {fileID: 1375441167}
 --- !u!4 &1121899623
 Transform:
   m_ObjectHideFlags: 0
@@ -100255,6 +100264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MechaBloom.HintManager
   levelManager: {fileID: 1121899622}
   feedbackTextUI: {fileID: 329735766}
+  audioManager: {fileID: 1258100684}
 --- !u!1 &1167077658
 GameObject:
   m_ObjectHideFlags: 0
@@ -107685,7 +107695,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MechaBloom.FlowPathCalculator
   levelManager: {fileID: 1121899622}
-  gardenGridManager: {fileID: 0}
+  gardenGridManager: {fileID: 390448336}
+  audioManager: {fileID: 1258100684}
 --- !u!4 &1232051756
 Transform:
   m_ObjectHideFlags: 0
@@ -108256,6 +108267,7 @@ MonoBehaviour:
   flowPathCalculator: {fileID: 1232051755}
   feedbackTextUI: {fileID: 329735766}
   selectionRing: {fileID: 2092851268}
+  audioManager: {fileID: 1258100684}
 --- !u!1 &1239766011
 GameObject:
   m_ObjectHideFlags: 0
@@ -136118,6 +136130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MechaBloom.GameManager
   levelManager: {fileID: 1121899622}
   uiManager: {fileID: 658916693}
+  audioManager: {fileID: 1258100684}
 --- !u!1 &1459228856
 GameObject:
   m_ObjectHideFlags: 0
@@ -147509,7 +147522,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0ff975c82f57c47af3b893b9a48d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MechaBloom.UndoManager
+  levelManager: {fileID: 1121899622}
+  flowPathCalculator: {fileID: 1232051755}
   feedbackTextUI: {fileID: 329735766}
+  audioManager: {fileID: 1258100684}
 --- !u!1 &1631891627
 GameObject:
   m_ObjectHideFlags: 0
@@ -161576,6 +161592,7 @@ MonoBehaviour:
   levelManager: {fileID: 1121899622}
   uiManager: {fileID: 658916693}
   tutorialMessageText: {fileID: 585524204}
+  saveManager: {fileID: 1889141174}
 --- !u!1 &1869815387
 GameObject:
   m_ObjectHideFlags: 0

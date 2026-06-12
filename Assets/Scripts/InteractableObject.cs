@@ -27,5 +27,10 @@ namespace MechaBloom
         public virtual void ResetState()
         {
         }
+
+        public void SetRuntimeTile(GardenTile runtimeTile)
+        {
+            tile = runtimeTile;
+        }
     }
 }
