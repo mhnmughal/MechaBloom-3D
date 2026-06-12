@@ -4,6 +4,8 @@ This file documents every external asset (font, sound, music, icon, UI sprite, t
 
 > **Current status (2026-06-12):** No external paid or copyrighted assets are used. The project uses **Unity primitives**, the **TextMeshPro default font**, simple **self-authored materials**, and **placeholder audio slots only**. No assets requiring attribution are present yet.
 
+No external paid or copyrighted assets are used. Current project uses Unity primitives and placeholder audio only.
+
 ---
 
 ## Fonts
