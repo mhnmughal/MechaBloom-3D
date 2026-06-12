@@ -80,7 +80,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Scene and script foundation.
+**Phase:** Manual scene hierarchy and UI skeleton complete.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
@@ -90,6 +90,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - [x] Materials + scene foundation (camera, light, environment, audio, managers).
 - [x] Manual UI canvas + required panels, 12 level buttons, and settings sliders.
 - [x] 12 manual level parents with required subgroup hierarchy and `LevelConfig` components.
+- [x] Manual hierarchy audit passed: required roots, camera transform/projection, single Audio Listener, manual AudioSources, Canvas, EventSystem, UI panels, and buttons exist before Play.
 - [ ] Full per-level puzzle tuning and serialized reference polish.
 - [ ] Complete flow graph logic, undo stack, tutorial progression, audio clips, and QA.
 
@@ -102,8 +103,9 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## NEXT TASKS
 
-1. Replace the foundation flow pass with a tile-by-tile routed graph that respects gear orientation, valve state, blockers, splitters, and visited direction pairs.
-2. Implement the real undo stack for gear/valve/core state plus action count restoration.
-3. Tune each of the 12 manual levels into distinct solvable puzzles and wire remaining UI buttons.
-4. Add or generate documented CC0/self-authored placeholder audio clips.
-5. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.
+1. Perform serialized reference polish across managers and UI buttons without creating anything at runtime.
+2. Replace the foundation flow pass with a tile-by-tile routed graph that respects gear orientation, valve state, blockers, splitters, and visited direction pairs.
+3. Implement the real undo stack for gear/valve/core state plus action count restoration.
+4. Tune each of the 12 manual levels into distinct solvable puzzles.
+5. Add or generate documented CC0/self-authored placeholder audio clips.
+6. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.

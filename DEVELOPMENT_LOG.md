@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-12 - Manual scene hierarchy and UI skeleton audit
+
+- **Change summary:** Verified `GameScene.unity` contains the complete manual pre-Play hierarchy required for MechaBloom 3D: `Environment`, `Levels`, `SharedGameplayObjects`, `Effects`, `Audio`, `Managers`, `UI`, `Main Camera`, and `Directional Light`. Confirmed all required UI panels and manually present buttons are already in the scene, with no runtime Canvas, EventSystem, AudioSource, or button creation required.
+- **Files / systems touched:** `Assets/Scenes/GameScene.unity` audited through AnkleBreaker Unity MCP; `MEMORY_BANK.md` and `DEVELOPMENT_LOG.md` updated.
+- **Testing status:** AnkleBreaker Unity MCP audit passed: active scene is `GameScene`; Main Camera is at `(8, 12, -8)`, rotation `(55, 45, 0)`, orthographic; exactly one Audio Listener exists and it is on Main Camera; `MusicSource`, `SFXSource`, and `UISFXSource` each have an `AudioSource`; Canvas, EventSystem, all 12 required UI panels, and manual buttons are present. C# compilation has 0 errors.
+- **Known risks:** This milestone is hierarchy/UI skeleton only. Gameplay, final puzzle logic, undo restoration, audio assets, and level tuning are still intentionally out of scope.
+- **Next planned step:** Polish serialized scene references and continue only when the next task explicitly asks for gameplay, levels, or puzzle systems.
+
+---
+
 ## 2026-06-12 - Manual scene and script foundation
 
 - **Change summary:** Added the core MechaBloom 3D C# script foundation and created an editor-assembled `GameScene.unity` with the required manual hierarchy, visible environment primitives, 12 level parents, LevelConfig components, manager objects, UI panels, level buttons, settings sliders, audio source placeholders, camera, light, effects, and materials.
