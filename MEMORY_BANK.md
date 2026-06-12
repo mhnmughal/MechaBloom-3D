@@ -80,7 +80,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Manual Levels 01-06 complete.
+**Phase:** Manual Levels 01-12 complete.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
@@ -93,7 +93,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - [x] Manual hierarchy audit passed: required roots, camera transform/projection, single Audio Listener, manual AudioSources, Canvas, EventSystem, UI panels, and buttons exist before Play.
 - [x] Architecture-only script pass complete: required manager/component scripts compile, use serialized references, and avoid forbidden runtime creation/search APIs.
 - [x] Gameplay material set and primitive prefab set created under `Assets/Materials/` and `Assets/Prefabs/`.
-- [x] `Level_01` through `Level_06` manually built in `GameScene.unity` with LevelConfig objective, hint, tutorial text, and mechanic-specific scene objects.
+- [x] `Level_01` through `Level_12` manually built in `GameScene.unity` with LevelConfig objective, hint, tutorial text, and mechanic-specific scene objects.
 - [ ] Full per-level puzzle tuning and serialized reference polish.
 - [ ] Gameplay implementation: flow graph logic, input actions, object state changes, undo stack, tutorial progression, audio clips, and QA.
 
@@ -102,17 +102,16 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - Flow calculation is intentionally placeholder architecture only; no tile-by-tile routed graph exists yet.
 - Gear, valve, energy core, plant bed, locked root, flow visual, star rating, and touch action methods are placeholders only; gameplay behavior is intentionally deferred.
 - Undo currently exposes the UI entry point and feedback, but does not restore a serialized action stack yet.
-- Levels 01-06 now have manual mechanic-specific layouts, but gameplay logic is still placeholder architecture so they are not yet playable puzzles.
-- Levels 07-12 remain placeholder/foundation layouts and still need manual mechanic-specific buildout.
+- Levels 01-12 now have manual mechanic-specific layouts, but gameplay logic is still placeholder architecture so they are not yet playable puzzles.
+- Levels 07-12 include flow matching, limited actions, broken gear, locked root, mixed systems, and final challenge layouts; final tuning must happen after gameplay logic exists.
 - Gameplay prefabs exist as reusable primitive-based assets, but they have not yet replaced/tuned every scene-level object.
 - Real CC0 audio files are not added yet; the scene uses documented AudioSource placeholders.
 
 ## NEXT TASKS
 
-1. Manually build `Level_07` through `Level_12` with their mechanic-specific layouts and LevelConfig text.
-2. Perform serialized reference polish across managers and UI buttons without creating anything at runtime.
-3. Implement touch/editor input actions against existing scene objects.
-4. Implement the tile-by-tile routed flow graph that respects gear orientation, valve state, blockers, splitters, and visited direction pairs.
-5. Implement the real undo stack for gear/valve/core state plus action count restoration.
-6. Add or generate documented CC0/self-authored placeholder audio clips.
-7. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.
+1. Perform serialized reference polish across managers and UI buttons without creating anything at runtime.
+2. Implement touch/editor input actions against existing scene objects.
+3. Implement the tile-by-tile routed flow graph that respects gear orientation, valve state, blockers, splitters, locked roots, flow type matching, and visited direction pairs.
+4. Implement action limits and the real undo stack for gear/valve/core state plus action count restoration.
+5. Add or generate documented CC0/self-authored placeholder audio clips.
+6. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.

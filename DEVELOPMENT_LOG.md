@@ -4,13 +4,23 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-12 - Manual Levels 07-12
+
+- **Change summary:** Manually rebuilt `Level_07` through `Level_12` inside `GameScene.unity` using existing Unity primitive prefab assets and scene hierarchy groups. The new level layouts introduce flow matching, limited actions, broken gear, locked root, mixed systems, and final challenge mechanics with serialized `LevelConfig` objective text, hint text, tutorial text, limits, required bloom count, and scene-object references.
+- **Files / systems touched:** `Assets/Scenes/GameScene.unity`, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: Levels 07-12 exist before Play, each has `LevelConfig`, 3 tutorial messages, objective/hint text, expected mechanic-specific object counts, 0 missing script references, and C# compilation has 0 errors. Active scene is saved/not dirty.
+- **Known risks:** All 12 levels are manually present and configured, but gameplay scripts are still architecture placeholders; routed flow, matching behavior, action limits, broken gear enforcement, locked root unlock behavior, win/loss, and final tuning are not implemented yet.
+- **Next planned step:** Polish serialized manager/UI references, then implement gameplay behavior against the existing scene objects.
+
+---
+
 ## 2026-06-12 - Manual Levels 01-06
 
 - **Change summary:** Manually rebuilt `Level_01` through `Level_06` inside `GameScene.unity` using existing Unity primitive prefab assets and scene hierarchy groups. Each level now has a `LevelConfig` with objective text, hint text, tutorial text, limits, required bloom count, and serialized references to its placed gameplay objects.
 - **Files / systems touched:** `Assets/Scenes/GameScene.unity`, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`.
 - **Testing status:** Verified through AnkleBreaker Unity MCP: Levels 01-06 exist before Play, each has `LevelConfig`, objective/hint/tutorial text, and mechanic-specific object counts for Tutorial, Gear Rotation, Valve, Blocker, Splitter, and Energy Core. C# compilation has 0 errors and the active scene is saved/not dirty.
 - **Known risks:** The levels are manually present and configured, but gameplay scripts are still architecture placeholders; flow traversal, object state changes, and win/loss behavior are not implemented yet.
-- **Next planned step:** Build Levels 07-12 manually, then implement gameplay behavior against the existing scene objects.
+- **Next planned step:** Continue with serialized reference polish and gameplay behavior against the existing scene objects.
 
 ---
 
