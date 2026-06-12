@@ -12,6 +12,7 @@ All notable changes to this project are documented here. Format loosely follows 
 - Architecture-only script pass with serialized references and compile-safe placeholders for later gameplay work.
 - Primitive gameplay prefab set: `Gear`, `Valve`, `Pipe`, `WaterSource`, `EnergyCore`, `Splitter`, `Blocker`, `PlantBed`, `BrokenGear`, and `LockedRoot`.
 - Requested gameplay materials for gears, pipes, valves, water, energy, plant beds, cores, blockers, and splitters.
+- Manual `Level_01` through `Level_06` scene layouts with LevelConfig objective, hint, tutorial text, and mechanic-specific objects.
 
 ### Changed
 - Advanced the project from documentation-only foundation to a compiled Unity scene/script foundation.
@@ -21,6 +22,7 @@ All notable changes to this project are documented here. Format loosely follows 
 - Environment verified: Unity 6000.4.6f1 (URP), GitHub CLI authenticated, repo confirmed PRIVATE.
 - Gameplay systems are not implemented yet; routed flow, object state changes, undo restoration, audio clips, and final level tuning remain.
 - Prefabs use Unity primitive meshes only; no paid assets or external models are used.
+- Levels 01-06 are present before Play, but playability still depends on future gameplay implementation.
 
 ---
 
