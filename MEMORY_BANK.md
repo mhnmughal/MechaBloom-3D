@@ -80,32 +80,35 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Manual scene hierarchy and UI skeleton complete.
+**Phase:** Core architecture scripts complete.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
 - [x] Documentation files created (README, MEMORY_BANK, DEVELOPMENT_LOG, LICENSE_NOTES, ATTRIBUTION, CHANGELOG).
-- [x] C# gameplay script foundation under `Assets/Scripts/`.
+- [x] Core C# architecture scripts under `Assets/Scripts/`.
 - [x] `GameScene.unity` created as an editor-assembled manual scene.
 - [x] Materials + scene foundation (camera, light, environment, audio, managers).
 - [x] Manual UI canvas + required panels, 12 level buttons, and settings sliders.
 - [x] 12 manual level parents with required subgroup hierarchy and `LevelConfig` components.
 - [x] Manual hierarchy audit passed: required roots, camera transform/projection, single Audio Listener, manual AudioSources, Canvas, EventSystem, UI panels, and buttons exist before Play.
+- [x] Architecture-only script pass complete: required manager/component scripts compile, use serialized references, and avoid forbidden runtime creation/search APIs.
 - [ ] Full per-level puzzle tuning and serialized reference polish.
-- [ ] Complete flow graph logic, undo stack, tutorial progression, audio clips, and QA.
+- [ ] Gameplay implementation: flow graph logic, input actions, object state changes, undo stack, tutorial progression, audio clips, and QA.
 
 ## KNOWN ISSUES
 
-- Current flow calculation is a foundation pass: it validates sources and blooms matching beds, but it is not yet a tile-by-tile routed graph with direction-pair loop protection.
-- Undo currently exposes the UI entry point and feedback, but does not yet restore a serialized action stack.
+- Flow calculation is intentionally placeholder architecture only; no tile-by-tile routed graph exists yet.
+- Gear, valve, energy core, plant bed, locked root, flow visual, star rating, and touch action methods are placeholders only; gameplay behavior is intentionally deferred.
+- Undo currently exposes the UI entry point and feedback, but does not restore a serialized action stack yet.
 - The 12 levels exist manually with placeholder primitives and mechanic markers; they still need final puzzle-specific tuning and visual polish.
 - Real CC0 audio files are not added yet; the scene uses documented AudioSource placeholders.
 
 ## NEXT TASKS
 
 1. Perform serialized reference polish across managers and UI buttons without creating anything at runtime.
-2. Replace the foundation flow pass with a tile-by-tile routed graph that respects gear orientation, valve state, blockers, splitters, and visited direction pairs.
-3. Implement the real undo stack for gear/valve/core state plus action count restoration.
-4. Tune each of the 12 manual levels into distinct solvable puzzles.
-5. Add or generate documented CC0/self-authored placeholder audio clips.
-6. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.
+2. Implement touch/editor input actions against existing scene objects.
+3. Implement the tile-by-tile routed flow graph that respects gear orientation, valve state, blockers, splitters, and visited direction pairs.
+4. Implement the real undo stack for gear/valve/core state plus action count restoration.
+5. Tune each of the 12 manual levels into distinct solvable puzzles.
+6. Add or generate documented CC0/self-authored placeholder audio clips.
+7. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.

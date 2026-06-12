@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-12 - Core architecture scripts
+
+- **Change summary:** Converted the MechaBloom 3D script layer into architecture-only MonoBehaviour shells with serialized scene references, typed component accessors, UI hook methods, and placeholder methods for later gameplay milestones. Removed early flow solving, plant blooming, gear/valve state changes, touch action execution, and star calculation behavior from the current code pass.
+- **Files / systems touched:** Required scripts under `Assets/Scripts/` including managers, level config, grid/flow components, interactables, UI/audio/save/tutorial/hint/undo/star/camera/safe-area helpers; `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, and `CHANGELOG.md`.
+- **Testing status:** Verified all requested script files exist. `rg` scan found no `GameObject.Find`, `FindObjectOfType`, `Resources.Load`, `Instantiate`, `CreatePrimitive`, runtime `new GameObject`, runtime `AddComponent`, or runtime UI/EventSystem creation patterns under `Assets/Scripts`. AnkleBreaker Unity MCP reports C# compilation has 0 errors.
+- **Known risks:** These scripts intentionally do not implement gameplay yet. Scene buttons can call placeholder methods, but puzzle solving, flow traversal, object state mutation, undo restoration, and final star logic still need explicit future tasks.
+- **Next planned step:** Wire/polish serialized references, then implement gameplay systems only when requested.
+
+---
+
 ## 2026-06-12 - Manual scene hierarchy and UI skeleton audit
 
 - **Change summary:** Verified `GameScene.unity` contains the complete manual pre-Play hierarchy required for MechaBloom 3D: `Environment`, `Levels`, `SharedGameplayObjects`, `Effects`, `Audio`, `Managers`, `UI`, `Main Camera`, and `Directional Light`. Confirmed all required UI panels and manually present buttons are already in the scene, with no runtime Canvas, EventSystem, AudioSource, or button creation required.

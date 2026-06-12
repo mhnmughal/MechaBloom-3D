@@ -12,64 +12,24 @@ namespace MechaBloom
         [SerializeField] private Material bloomedMaterial;
         [SerializeField] private ParticleSystem bloomParticles;
 
-        private PlantGrowthStage stage = PlantGrowthStage.Empty;
-
         public GardenTile Tile => tile;
         public FlowType RequiredFlow => requiredFlow;
-        public PlantGrowthStage Stage => stage;
-        public bool IsBloomed => stage == PlantGrowthStage.Bloomed;
-
-        private void Start()
-        {
-            ResetState();
-        }
+        public Renderer[] Renderers => renderers;
+        public Material EmptyMaterial => emptyMaterial;
+        public Material GrowingMaterial => growingMaterial;
+        public Material BloomedMaterial => bloomedMaterial;
+        public ParticleSystem BloomParticles => bloomParticles;
+        public PlantGrowthStage Stage => PlantGrowthStage.Empty;
+        public bool IsBloomed => false;
 
         public bool TryReceiveFlow(FlowType flowType)
         {
-            if (flowType != requiredFlow || IsBloomed)
-            {
-                return false;
-            }
-
-            SetStage(PlantGrowthStage.Bloomed);
-            if (bloomParticles != null)
-            {
-                bloomParticles.Play();
-            }
-
-            return true;
+            return false;
         }
 
         public void ResetState()
         {
-            SetStage(PlantGrowthStage.Empty);
-        }
-
-        private void SetStage(PlantGrowthStage newStage)
-        {
-            stage = newStage;
-            var material = emptyMaterial;
-            if (stage == PlantGrowthStage.Growing)
-            {
-                material = growingMaterial;
-            }
-            else if (stage == PlantGrowthStage.Bloomed)
-            {
-                material = bloomedMaterial;
-            }
-
-            if (material == null || renderers == null)
-            {
-                return;
-            }
-
-            foreach (var item in renderers)
-            {
-                if (item != null)
-                {
-                    item.sharedMaterial = material;
-                }
-            }
+            // Plant state changes are intentionally deferred to gameplay.
         }
     }
 }

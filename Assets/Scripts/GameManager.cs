@@ -9,6 +9,8 @@ namespace MechaBloom
 
         private bool paused;
 
+        public bool Paused => paused;
+
         private void Start()
         {
             uiManager?.ShowTitle();
@@ -18,7 +20,7 @@ namespace MechaBloom
         {
             paused = false;
             Time.timeScale = 1f;
-            levelManager?.LoadLevel(1);
+            uiManager?.ShowLevelSelect();
         }
 
         public void OpenMainMenu()
@@ -47,11 +49,10 @@ namespace MechaBloom
             if (paused)
             {
                 Resume();
+                return;
             }
-            else
-            {
-                Pause();
-            }
+
+            Pause();
         }
 
         public void QuitForEditorTesting()

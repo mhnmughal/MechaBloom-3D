@@ -10,21 +10,18 @@ namespace MechaBloom
         [SerializeField] private Material closedMaterial;
         [SerializeField] private Material openMaterial;
 
-        private bool isOpen;
-
-        public bool IsOpen => isOpen;
+        public bool StartsOpen => startsOpen;
+        public Transform ValveHandle => valveHandle;
+        public Renderer[] Renderers => renderers;
+        public Material ClosedMaterial => closedMaterial;
+        public Material OpenMaterial => openMaterial;
+        public bool IsOpen => startsOpen;
         public override bool CanActivate => true;
         public override bool CanRotate => true;
 
-        private void Start()
-        {
-            ResetState();
-        }
-
         public override bool Activate()
         {
-            SetOpen(!isOpen);
-            return true;
+            return false;
         }
 
         public override bool Rotate()
@@ -34,30 +31,7 @@ namespace MechaBloom
 
         public override void ResetState()
         {
-            SetOpen(startsOpen);
-        }
-
-        private void SetOpen(bool value)
-        {
-            isOpen = value;
-            if (valveHandle != null)
-            {
-                valveHandle.localRotation = Quaternion.Euler(0f, isOpen ? 90f : 0f, 0f);
-            }
-
-            var material = isOpen ? openMaterial : closedMaterial;
-            if (material == null || renderers == null)
-            {
-                return;
-            }
-
-            foreach (var item in renderers)
-            {
-                if (item != null)
-                {
-                    item.sharedMaterial = material;
-                }
-            }
+            // Valve state changes are intentionally deferred to gameplay.
         }
     }
 }

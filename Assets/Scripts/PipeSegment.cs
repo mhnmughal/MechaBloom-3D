@@ -12,22 +12,13 @@ namespace MechaBloom
 
         public GardenTile Tile => tile;
         public FlowType AcceptedFlow => acceptedFlow;
+        public Renderer[] Renderers => renderers;
+        public Material InactiveMaterial => inactiveMaterial;
+        public Material ActiveMaterial => activeMaterial;
 
         public void SetFlowActive(bool active)
         {
-            var material = active ? activeMaterial : inactiveMaterial;
-            if (material == null || renderers == null)
-            {
-                return;
-            }
-
-            foreach (var item in renderers)
-            {
-                if (item != null)
-                {
-                    item.sharedMaterial = material;
-                }
-            }
+            // Flow visuals are intentionally deferred to a gameplay milestone.
         }
     }
 }
