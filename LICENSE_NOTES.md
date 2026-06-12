@@ -50,12 +50,14 @@ All SFX are **named placeholder slots** until verified CC0 files are added. No r
 | Asset | Source | Author | Licence | Commercial use | Attribution required | Notes |
 |-------|--------|--------|---------|----------------|----------------------|-------|
 | MechaBloom 3D solid-colour URP materials | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Yes | No | Includes floor, tile, gear, pipe, valve, water, energy, plant, blocker, splitter, core, and UI panel materials. |
+| Gameplay material set (`Gear_Brass`, `Gear_Selected`, `Pipe_Metal`, `Pipe_WaterActive`, `Pipe_Inactive`, `Valve_Open`, `Valve_Closed`, `Water_Blue`, `Energy_Green`, `Energy_Yellow`, `PlantBed_Empty`, `PlantBed_Growing`, `PlantBed_Bloomed`, `Core_Active`, `Core_Inactive`, `Blocker_Stone`, `Splitter_Metal`) | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Yes | No | Solid-colour/emissive Unity materials only; no texture imports. |
 
 ## Models / Prefabs
 
 | Asset | Source | Author | Licence | Notes |
 |-------|--------|--------|---------|-------|
-| (none) | — | — | — | All gameplay/environment objects use Unity primitive meshes (cube, cylinder, sphere, plane, capsule). |
+| Gameplay prefabs (`Gear`, `Valve`, `Pipe`, `WaterSource`, `EnergyCore`, `Splitter`, `Blocker`, `PlantBed`, `BrokenGear`, `LockedRoot`) | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Built only from Unity primitive meshes (`Cube`, `Sphere`, `Cylinder`) plus project scripts/materials. No paid assets, external models, or imported meshes are used. |
+| Environment primitives | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Environment objects use Unity primitive meshes. |
 
 ---
 

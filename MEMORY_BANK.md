@@ -80,7 +80,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Core architecture scripts complete.
+**Phase:** Gameplay prefab and material foundation complete.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
@@ -92,6 +92,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - [x] 12 manual level parents with required subgroup hierarchy and `LevelConfig` components.
 - [x] Manual hierarchy audit passed: required roots, camera transform/projection, single Audio Listener, manual AudioSources, Canvas, EventSystem, UI panels, and buttons exist before Play.
 - [x] Architecture-only script pass complete: required manager/component scripts compile, use serialized references, and avoid forbidden runtime creation/search APIs.
+- [x] Gameplay material set and primitive prefab set created under `Assets/Materials/` and `Assets/Prefabs/`.
 - [ ] Full per-level puzzle tuning and serialized reference polish.
 - [ ] Gameplay implementation: flow graph logic, input actions, object state changes, undo stack, tutorial progression, audio clips, and QA.
 
@@ -101,6 +102,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - Gear, valve, energy core, plant bed, locked root, flow visual, star rating, and touch action methods are placeholders only; gameplay behavior is intentionally deferred.
 - Undo currently exposes the UI entry point and feedback, but does not restore a serialized action stack yet.
 - The 12 levels exist manually with placeholder primitives and mechanic markers; they still need final puzzle-specific tuning and visual polish.
+- Gameplay prefabs exist as reusable primitive-based assets, but they have not yet replaced/tuned every scene-level object.
 - Real CC0 audio files are not added yet; the scene uses documented AudioSource placeholders.
 
 ## NEXT TASKS

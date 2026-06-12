@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-12 - Gameplay prefabs and materials
+
+- **Change summary:** Created the reusable MechaBloom 3D gameplay prefab set using only Unity primitive meshes and normalized the requested solid-colour/emissive material set.
+- **Files / systems touched:** `Assets/Materials/` and `Assets/Prefabs/` for `Gear`, `Valve`, `Pipe`, `WaterSource`, `EnergyCore`, `Splitter`, `Blocker`, `PlantBed`, `BrokenGear`, and `LockedRoot`; `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`, `LICENSE_NOTES.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP that prefabs load from `Assets/Prefabs/`, use only primitive mesh names `Cube`, `Sphere`, and `Cylinder`, and C# compilation has 0 errors. Active scene remains saved and not dirty.
+- **Known risks:** Prefabs are visual/architectural assets only; gameplay logic is still placeholder architecture and level-specific puzzle tuning remains.
+- **Next planned step:** Use these prefabs for level assembly/tuning when the next level-building task asks for it.
+
+---
+
 ## 2026-06-12 - Core architecture scripts
 
 - **Change summary:** Converted the MechaBloom 3D script layer into architecture-only MonoBehaviour shells with serialized scene references, typed component accessors, UI hook methods, and placeholder methods for later gameplay milestones. Removed early flow solving, plant blooming, gear/valve state changes, touch action execution, and star calculation behavior from the current code pass.
