@@ -38,9 +38,13 @@ Scripts **may**: show/hide existing panels; update existing TMP text/sliders/ima
 
 ## 6. Camera Rules
 
-One manually placed **Main Camera**: Orthographic, isometric view, Position (8, 12, -8), Rotation (55, 45, 0), Orthographic Size tuned in Inspector. Holds the scene's **only Audio Listener**. No camera creation/move/follow/pan/zoom in code; no hardcoded transform; no reset in Start/Awake. Only `CameraShakeOnly` is allowed — it stores the Inspector position on Start, applies a small temporary shake on wrong action / level complete, then returns to origin without changing base angle or zoom.
+Current saved camera framing: Main Camera Position `(8, 12, -8)`, Rotation `(55, 315, 0)`, Orthographic Size `11`. This corrects the board-facing yaw while keeping the manually placed isometric camera rule.
+
+One manually placed **Main Camera**: Orthographic, isometric view, Position (8, 12, -8), Rotation (55, 315, 0), Orthographic Size 11. Holds the scene's **only Audio Listener**. No camera creation/move/follow/pan/zoom in code; no hardcoded transform; no reset in Start/Awake. Only `CameraShakeOnly` is allowed — it stores the Inspector position on Start, applies a small temporary shake on wrong action / level complete, then returns to origin without changing base angle or zoom.
 
 ## 7. UI Rules
+
+Current saved HUD/mobile layout uses proportional RectTransform anchors for gameplay text and bottom mobile controls so it remains readable in landscape builds and does not collapse in tall editor Free Aspect views.
 
 All UI is hand-built under `UI > Canvas`. Canvas: Screen Space Overlay, Canvas Scaler = Scale With Screen Size, reference 1920×1080, Match 0.5, Graphic Raycaster on. EventSystem exists manually. `SafeAreaHandler` keeps key UI clear of notches/cutouts/home indicator. No runtime UI creation; no hardcoded layout positions. Buttons large and readable for mobile.
 
@@ -104,6 +108,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - [x] Self-authored placeholder WAV audio clips are committed and wired to `AudioManager`; `MusicSource`, `SFXSource`, and `UISFXSource` are the only scene AudioSources.
 - [x] Play Mode solver smoke test found valid solutions for Level_01 through Level_12 under the implemented flow rules.
 - [x] Input System-only runtime path verified: `TouchInputController` uses `UnityEngine.InputSystem`, and the manual EventSystem uses `InputSystemUIInputModule` with no `StandaloneInputModule`.
+- [x] Camera/UI framing pass complete: all manual levels share a centered camera frame, Main Camera faces the board at `(55, 315, 0)`, and bottom mobile controls use proportional slots instead of fixed-width overlap.
 
 ## KNOWN ISSUES
 

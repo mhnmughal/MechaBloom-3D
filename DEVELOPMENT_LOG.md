@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-18 - Responsive HUD and camera framing fix
+
+- **Change summary:** Fixed the bad Game View presentation reported from a tall Free Aspect editor window. Corrected the Main Camera yaw so it faces the manually placed level boards, set orthographic size to 11, recentered the offset manual Level_07 through Level_12 parents, converted gameplay HUD text and mobile control buttons to responsive anchors, and disabled duplicate HUD action buttons so the mobile control row owns all gameplay actions.
+- **Files / systems touched:** `Assets/Scenes/GameScene.unity`, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: Unity compilation has 0 errors; Play Mode console has 0 errors; Level_06 projects within viewport `0.25..0.75` horizontally in the tall Free Aspect view; Level_12 projects within viewport `0.00..1.00`; all six bottom mobile buttons remain active with proportional rects.
+- **Known risks:** Real Android/iPhone safe-area QA is still required, especially for physical devices with notches/home indicators.
+- **Next planned step:** Run real-device landscape checks and tune final camera zoom if needed after hands-on play.
+
+---
+
 ## 2026-06-18 - Input System runtime exception fix
 
 - **Change summary:** Fixed the Input System-only runtime errors reported in Play Mode. Replaced legacy `UnityEngine.Input` calls in `TouchInputController` with `UnityEngine.InputSystem` touchscreen, mouse, and keyboard APIs. Updated the manually placed `GameScene/UI/EventSystem` from `StandaloneInputModule` to `InputSystemUIInputModule` wired to `Assets/InputSystem_Actions.inputactions`.

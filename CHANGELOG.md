@@ -25,9 +25,11 @@ All notable changes to this project are documented here. Format loosely follows 
 - Tuned Levels 07-12, Level 05 splitter output, tile references, and locked-root pass-through behavior so all levels have valid solutions under the implemented flow rules.
 - Set the project to landscape-only mobile orientation and enabled auto-sizing/wrapping for all TextMeshPro UI text.
 - Switched the manual EventSystem to `InputSystemUIInputModule` and updated touch/editor input to use `UnityEngine.InputSystem` APIs only.
+- Reframed the Main Camera to face the manual level boards and converted gameplay HUD/mobile controls to responsive anchored layouts.
 
 ### Fixed
 - Resolved Play Mode `InvalidOperationException` errors caused by legacy `UnityEngine.Input` reads while Player Settings are set to Input System-only.
+- Fixed clipped/off-screen gameplay presentation in tall editor Free Aspect views by recentering offset manual levels and removing fixed-width bottom button overlap.
 
 ### Notes
 - Environment verified: Unity 6000.4.6f1 (URP), GitHub CLI authenticated, repo confirmed PRIVATE.
