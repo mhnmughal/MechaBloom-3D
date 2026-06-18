@@ -51,6 +51,7 @@ namespace MechaBloom
             ResetActiveLevel();
             uiManager?.ShowGameplay();
             tutorialManager?.BeginTutorial();
+            CompleteSolvedNoActionLevel();
         }
 
         public void RestartActiveLevel()
@@ -195,6 +196,40 @@ namespace MechaBloom
             undoManager?.Clear();
             flowPathCalculator?.Recalculate(false);
             RefreshObjectiveState();
+        }
+
+        private void CompleteSolvedNoActionLevel()
+        {
+            var level = ActiveLevel;
+            if (level == null || LevelHasPlayerActions(level))
+            {
+                return;
+            }
+
+            EvaluateLevelState();
+        }
+
+        private static bool LevelHasPlayerActions(LevelConfig level)
+        {
+            return HasAny(level.Gears) || HasAny(level.Valves) || HasAny(level.EnergyCores);
+        }
+
+        private static bool HasAny<T>(T[] items) where T : Object
+        {
+            if (items == null)
+            {
+                return false;
+            }
+
+            foreach (var item in items)
+            {
+                if (item != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private void ResetObjects(LevelConfig level)

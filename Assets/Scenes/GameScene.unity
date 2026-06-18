@@ -318,10 +318,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.75
+  m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1258100684}
+        m_TargetAssemblyTypeName: MechaBloom.AudioManager, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0.7
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3050371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6113,6 +6125,10 @@ PrefabInstance:
       value: Gear_RootBypass
       objectReference: {fileID: 0}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 850705686}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 1
       objectReference: {fileID: 0}
@@ -6532,7 +6548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 41315214}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &41315214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6882,9 +6910,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -6898,7 +6926,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -7284,7 +7312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 51152747}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &51152747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9298,7 +9338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83974858}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &83974858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9635,6 +9687,18 @@ PrefabInstance:
       propertyPath: tile
       value: 
       objectReference: {fileID: 1861515750}
+    - target: {fileID: 4733490567193088006, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
+      propertyPath: outputDirections.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733490567193088006, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
+      propertyPath: 'outputDirections.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733490567193088006, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
+      propertyPath: 'outputDirections.Array.data[2]'
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6295667320209370287, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -11250,9 +11314,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11266,7 +11330,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -16637,9 +16701,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -16653,7 +16717,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -16850,9 +16914,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -16866,7 +16930,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -16987,9 +17051,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -17003,7 +17067,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -17124,9 +17188,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -17140,7 +17204,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -17477,7 +17541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 166151751}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1161976117}
+        m_TargetAssemblyTypeName: MechaBloom.HintManager, Assembly-CSharp
+        m_MethodName: ShowHint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &166151751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17603,9 +17679,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -17619,7 +17695,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -17854,7 +17930,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 179595592}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &179595592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18139,9 +18227,9 @@ MonoBehaviour:
   m_fontSize: 26
   m_fontSizeBase: 26
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 13
+  m_fontSizeMax: 26
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -18155,7 +18243,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -24215,9 +24303,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -24231,7 +24319,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -25044,6 +25132,10 @@ PrefabInstance:
       value: Valve_MixedEnergyGate
       objectReference: {fileID: 0}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1003053889}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: startsOpen
       value: 1
       objectReference: {fileID: 0}
@@ -25203,9 +25295,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -25219,7 +25311,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -25265,6 +25357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve_FinalEnergyGate
       objectReference: {fileID: 0}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 63081877}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: valveHandle
       value: 
@@ -25851,7 +25947,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 244649674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &244649674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26193,7 +26301,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 246466265}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &246466265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36717,15 +36837,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.75
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36766,7 +36886,7 @@ PrefabInstance:
     - target: {fileID: 9002255045954760572, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1228749656}
+      objectReference: {fileID: 1694102720}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37003,9 +37123,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -37019,7 +37139,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -37140,7 +37260,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 878670825}
+      objectReference: {fileID: 1348708074}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -37159,11 +37279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.75
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37565,9 +37685,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -37581,7 +37701,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -37942,9 +38062,9 @@ MonoBehaviour:
   m_fontSize: 54
   m_fontSizeBase: 54
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 27
+  m_fontSizeMax: 54
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -37958,7 +38078,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -38330,7 +38450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 291314324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: PlayFirstUnlockedLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &291314324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38369,135 +38501,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291314321}
   m_CullTransparentMesh: 1
---- !u!1 &292112901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 292112902}
-  - component: {fileID: 292112903}
-  m_Layer: 0
-  m_Name: Music_FreeLicensePlaceholder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &292112902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292112901}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 682856275}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &292112903
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292112901}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &293572285
 GameObject:
   m_ObjectHideFlags: 0
@@ -38580,7 +38583,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 293572288}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &293572288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39306,7 +39321,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 882382157}
+      objectReference: {fileID: 1694102720}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -39321,15 +39336,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39565,9 +39580,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -39581,7 +39596,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -41183,9 +41198,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -41199,7 +41214,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -41468,7 +41483,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1499346324}
+      objectReference: {fileID: 583434070}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -41483,15 +41498,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.75
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41670,9 +41685,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -41686,7 +41701,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -42725,9 +42740,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -42741,7 +42756,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -43725,9 +43740,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -43741,7 +43756,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -43857,7 +43872,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 419464313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenCredits
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &419464313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49340,11 +49367,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.25
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49385,7 +49412,7 @@ PrefabInstance:
     - target: {fileID: 9002255045954760572, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1285716233}
+      objectReference: {fileID: 1735106849}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50962,9 +50989,9 @@ MonoBehaviour:
   m_fontSize: 46
   m_fontSizeBase: 46
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 23
+  m_fontSizeMax: 46
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -50978,7 +51005,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -51158,7 +51185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51600,7 +51627,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 471199250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1161976117}
+        m_TargetAssemblyTypeName: MechaBloom.HintManager, Assembly-CSharp
+        m_MethodName: ShowHint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &471199250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51890,9 +51929,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -51906,7 +51945,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -51958,7 +51997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51992,6 +52031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_FinalUpperBend
       objectReference: {fileID: 0}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1228749656}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 2
@@ -52685,9 +52728,9 @@ MonoBehaviour:
   m_fontSize: 34
   m_fontSizeBase: 34
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 17
+  m_fontSizeMax: 34
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -52701,7 +52744,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -53405,9 +53448,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -53421,7 +53464,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -53710,7 +53753,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 520385635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: ResetProgress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &520385635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54245,9 +54300,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -54261,7 +54316,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -54441,7 +54496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.75
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54475,6 +54530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_AssistRouter
       objectReference: {fileID: 0}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1473436688}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: renderers.Array.size
       value: 10
@@ -54923,7 +54982,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 568763081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: ShowLevelSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &568763081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55171,7 +55242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 572696006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1237329065}
+        m_TargetAssemblyTypeName: MechaBloom.TouchInputController, Assembly-CSharp
+        m_MethodName: ActivateSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &572696006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55756,9 +55839,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -55772,7 +55855,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -55891,10 +55974,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.75
+  m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1258100684}
+        m_TargetAssemblyTypeName: MechaBloom.AudioManager, Assembly-CSharp
+        m_MethodName: SetSfxVolume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0.8
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583025009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56148,9 +56243,9 @@ MonoBehaviour:
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -56164,7 +56259,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -61489,9 +61584,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -61505,7 +61600,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -66778,7 +66873,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 612632296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &612632296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67400,6 +67507,10 @@ PrefabInstance:
       value: Valve_FinalUpperGate
       objectReference: {fileID: 0}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 697136525}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: valveHandle
       value: 
       objectReference: {fileID: 631258251}
@@ -67409,7 +67520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6396255647162981877, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6396255647162981877, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67555,9 +67666,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -67571,7 +67682,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -67744,7 +67855,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1944474886}
+      objectReference: {fileID: 224376874}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -67759,11 +67870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67990,9 +68101,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -68006,7 +68117,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -68158,8 +68269,8 @@ MonoBehaviour:
   m_fontSize: 72
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 36
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -68174,7 +68285,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -68453,9 +68564,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: d66fdd687dee6a44db89f9eef403f2bf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -68638,7 +68749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 647805675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &647805675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68981,9 +69104,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -68997,7 +69120,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -69225,7 +69348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 652557046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1629166314}
+        m_TargetAssemblyTypeName: MechaBloom.UndoManager, Assembly-CSharp
+        m_MethodName: UndoLastAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &652557046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69683,6 +69818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_MixedUpper
       objectReference: {fileID: 0}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1731502283}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 1
@@ -70328,6 +70467,10 @@ PrefabInstance:
       value: Gear_WaterRouter
       objectReference: {fileID: 0}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 294953245}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 1
       objectReference: {fileID: 0}
@@ -70720,7 +70863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2327102002051221669, guid: d1f0d10f50f949e4daf9feaa0ccf0613, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.25
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2327102002051221669, guid: d1f0d10f50f949e4daf9feaa0ccf0613, type: 3}
       propertyPath: m_LocalRotation.w
@@ -71080,7 +71223,6 @@ Transform:
   - {fileID: 646554419}
   - {fileID: 1602045644}
   - {fileID: 1798625847}
-  - {fileID: 292112902}
   m_Father: {fileID: 1586397080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687573900
@@ -71145,7 +71287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -71296,9 +71438,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -71312,7 +71454,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -71433,9 +71575,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -71449,7 +71591,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -72286,9 +72428,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -72302,7 +72444,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -72418,8 +72560,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 0
+      m_Calls:
+      - m_Target: {fileID: 1889141174}
+        m_TargetAssemblyTypeName: MechaBloom.SaveManager, Assembly-CSharp
+        m_MethodName: SetVibrationEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  m_IsOn: 1
 --- !u!1001 &719291710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73166,9 +73320,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -73182,7 +73336,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -73329,11 +73483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -73374,7 +73528,7 @@ PrefabInstance:
     - target: {fileID: 9002255045954760572, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 566373429}
+      objectReference: {fileID: 92840689}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74523,9 +74677,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -74539,7 +74693,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -75282,9 +75436,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -75298,7 +75452,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -75991,7 +76145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 818121156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818121156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76117,9 +76283,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -76133,7 +76299,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -77298,7 +77464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 846029828}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &846029828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79239,7 +79417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -79390,9 +79568,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -79406,7 +79584,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -79452,6 +79630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve_LockedRootWaterGate
       objectReference: {fileID: 0}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 443803332}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: valveHandle
       value: 
@@ -79735,9 +79917,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -79751,7 +79933,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -79872,9 +80054,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -79888,7 +80070,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -80699,9 +80881,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -80715,7 +80897,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -81111,9 +81293,9 @@ MonoBehaviour:
   m_fontSize: 52
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 26
+  m_fontSizeMax: 52
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -81127,7 +81309,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -81435,7 +81617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -81845,9 +82027,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -81861,7 +82043,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -82217,7 +82399,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 964878260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &964878260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82655,7 +82849,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 976606912}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &976606912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82986,9 +83192,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -83002,7 +83208,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -83565,7 +83771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 984684387}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &984684387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84217,9 +84435,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -84233,7 +84451,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -84400,9 +84618,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -84416,7 +84634,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -85031,9 +85249,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -85047,7 +85265,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -85168,9 +85386,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -85184,7 +85402,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -85317,7 +85535,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -85325,7 +85543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -85359,6 +85577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_FinalMainRouter
       objectReference: {fileID: 0}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 777623840}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 1
@@ -85560,9 +85782,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -85576,7 +85798,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -85862,9 +86084,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -85878,7 +86100,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -91156,9 +91378,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -91172,7 +91394,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -91456,6 +91678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve_LimitedGate
       objectReference: {fileID: 0}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1836072363}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: valveHandle
       value: 
@@ -92587,15 +92813,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.75
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.25
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -92636,7 +92862,7 @@ PrefabInstance:
     - target: {fileID: 9002255045954760572, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 77895800}
+      objectReference: {fileID: 1944474886}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -98798,9 +99024,9 @@ MonoBehaviour:
   m_fontSize: 22
   m_fontSizeBase: 22
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 11
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -98814,7 +99040,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -99298,7 +99524,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1135273298}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1135273298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99424,9 +99662,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -99440,7 +99678,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -99485,18 +99723,18 @@ PrefabInstance:
     - target: {fileID: 5881216147124710290, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 224376874}
+      objectReference: {fileID: 820387849}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.25
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -100479,9 +100717,9 @@ MonoBehaviour:
   m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 20
+  m_fontSizeMax: 40
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -100495,7 +100733,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -100613,7 +100851,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1168182295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1168182295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105811,9 +106061,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -105827,7 +106077,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -106786,9 +107036,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -106802,7 +107052,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -107940,7 +108190,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1235789990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1235789990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108268,6 +108530,8 @@ MonoBehaviour:
   feedbackTextUI: {fileID: 329735766}
   selectionRing: {fileID: 2092851268}
   audioManager: {fileID: 1258100684}
+  undoManager: {fileID: 1629166314}
+  gameManager: {fileID: 1459056258}
 --- !u!1 &1239766011
 GameObject:
   m_ObjectHideFlags: 0
@@ -108888,9 +109152,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -108904,7 +109168,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -109162,23 +109426,23 @@ MonoBehaviour:
   sfxSource: {fileID: 1602045643}
   uiSfxSource: {fileID: 1798625846}
   saveManager: {fileID: 1889141174}
-  uiButtonClick: {fileID: 0}
-  objectSelect: {fileID: 0}
-  gearRotate: {fileID: 0}
-  valveOpen: {fileID: 0}
-  valveClose: {fileID: 0}
-  waterFlowStart: {fileID: 0}
-  energyFlowStart: {fileID: 0}
-  plantSprout: {fileID: 0}
-  plantBloom: {fileID: 0}
-  wrongAction: {fileID: 0}
-  blockedFlow: {fileID: 0}
-  notEnoughEnergy: {fileID: 0}
-  undo: {fileID: 0}
-  hint: {fileID: 0}
-  levelComplete: {fileID: 0}
-  gameOver: {fileID: 0}
-  starReward: {fileID: 0}
+  uiButtonClick: {fileID: 8300000, guid: 23345a98f1b8f664e943637a7da4fff9, type: 3}
+  objectSelect: {fileID: 8300000, guid: e69bb74208841b54e8efd0b9075726c3, type: 3}
+  gearRotate: {fileID: 8300000, guid: f43681278e9089246b7118fc2de21bca, type: 3}
+  valveOpen: {fileID: 8300000, guid: 09f92ccc8b9833141b0529402e06bff8, type: 3}
+  valveClose: {fileID: 8300000, guid: 3b8cfdb74901ff74ebfe2e7ee7e8b10a, type: 3}
+  waterFlowStart: {fileID: 8300000, guid: 17fd0f83965f7e7479739c84aa34b14c, type: 3}
+  energyFlowStart: {fileID: 8300000, guid: 1f2f5d9999eed0d46905ff9526908b72, type: 3}
+  plantSprout: {fileID: 8300000, guid: 326ed18a1ae97fa4484f4ca75f2e6655, type: 3}
+  plantBloom: {fileID: 8300000, guid: 2b29095cc82aa6c4c98c9faf5ba65a62, type: 3}
+  wrongAction: {fileID: 8300000, guid: 337b38636773682438ea7fe0add4d9b7, type: 3}
+  blockedFlow: {fileID: 8300000, guid: 67bb77b9275a64647adece13a5ef3f89, type: 3}
+  notEnoughEnergy: {fileID: 8300000, guid: 2d5bc84f6637af143aa68ad9f59ac233, type: 3}
+  undo: {fileID: 8300000, guid: 18c51ea876bb9334bad558bf2f4a594d, type: 3}
+  hint: {fileID: 8300000, guid: 6f120930d8187f1458f624bc9248e9e6, type: 3}
+  levelComplete: {fileID: 8300000, guid: 84ee2f111a0f6a24984aa729ce79d6be, type: 3}
+  gameOver: {fileID: 8300000, guid: bca5a8f994814b44d9ce4af9dac05aec, type: 3}
+  starReward: {fileID: 8300000, guid: 588717dc88886fa448184837ba56d92f, type: 3}
 --- !u!1 &1260338661
 GameObject:
   m_ObjectHideFlags: 0
@@ -110464,9 +110728,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -110480,7 +110744,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -110729,9 +110993,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -110745,7 +111009,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -121617,7 +121881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -121625,7 +121889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 2355601191377196441, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -121659,6 +121923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_FinalBend
       objectReference: {fileID: 0}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 37821641}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 1
@@ -121860,9 +122128,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -121876,7 +122144,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -122163,6 +122431,10 @@ PrefabInstance:
       value: Valve_FinalLowerGate
       objectReference: {fileID: 0}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1985174004}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: startsOpen
       value: 1
       objectReference: {fileID: 0}
@@ -122176,7 +122448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6396255647162981877, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6396255647162981877, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -122626,7 +122898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1349867667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1349867667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123071,6 +123355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyCore_MixedSystems
       objectReference: {fileID: 0}
+    - target: {fileID: 1374710926243681660, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 323626754}
     - target: {fileID: 1746832760228857275, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -123859,9 +124147,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -123875,7 +124163,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -123920,18 +124208,18 @@ PrefabInstance:
     - target: {fileID: 5881216147124710290, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1240442922}
+      objectReference: {fileID: 937192563}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.25
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -124205,9 +124493,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -124221,7 +124509,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -124285,7 +124573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -124436,9 +124724,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -124452,7 +124740,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -129894,7 +130182,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 0}
   m_HandleRect: {fileID: 0}
@@ -130121,9 +130409,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -130137,7 +130425,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -130190,7 +130478,7 @@ PrefabInstance:
     - target: {fileID: 4733490567193088006, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1348708074}
+      objectReference: {fileID: 1274972367}
     - target: {fileID: 4733490567193088006, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
       propertyPath: outputDirections.Array.size
       value: 2
@@ -130205,11 +130493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6295667320209370287, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.75
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6295667320209370287, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6295667320209370287, guid: 1a47a3fba985a5b4aa9bee35cd564fc5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -135917,7 +136205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1455663952}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1455663952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136131,6 +136431,8 @@ MonoBehaviour:
   levelManager: {fileID: 1121899622}
   uiManager: {fileID: 658916693}
   audioManager: {fileID: 1258100684}
+  saveManager: {fileID: 1889141174}
+  levelSelectUI: {fileID: 73966447}
 --- !u!1 &1459228856
 GameObject:
   m_ObjectHideFlags: 0
@@ -136360,6 +136662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve_BrokenGearExit
       objectReference: {fileID: 0}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1538798380}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: startsOpen
       value: 1
@@ -136775,9 +137081,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -136791,7 +137097,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -137319,9 +137625,9 @@ MonoBehaviour:
   m_fontSize: 52
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 26
+  m_fontSizeMax: 52
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -137335,7 +137641,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -137965,7 +138271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1496365364}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1496365364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138357,9 +138675,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -138373,7 +138691,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -139300,9 +139618,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -139316,7 +139634,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -140058,9 +140376,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -140074,7 +140392,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -140195,9 +140513,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -140211,7 +140529,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -140619,9 +140937,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -140635,7 +140953,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -140814,7 +141132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1570777156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1237329065}
+        m_TargetAssemblyTypeName: MechaBloom.TouchInputController, Assembly-CSharp
+        m_MethodName: RotateSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1570777156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141101,9 +141431,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -141117,7 +141447,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -141881,8 +142211,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -142180,9 +142510,9 @@ MonoBehaviour:
   m_fontSize: 26
   m_fontSizeBase: 26
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 13
+  m_fontSizeMax: 26
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -142196,7 +142526,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -147311,9 +147641,9 @@ MonoBehaviour:
   m_fontSize: 52
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 26
+  m_fontSizeMax: 52
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -147327,7 +147657,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -147608,7 +147938,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1631891630}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenSettings
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1631891630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147766,9 +148108,9 @@ MonoBehaviour:
   m_fontSize: 26
   m_fontSizeBase: 26
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 13
+  m_fontSizeMax: 26
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -147782,7 +148124,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -148038,9 +148380,9 @@ MonoBehaviour:
   m_fontSize: 27
   m_fontSizeBase: 27
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 13.5
+  m_fontSizeMax: 27
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -148054,7 +148396,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -148227,18 +148569,18 @@ PrefabInstance:
     - target: {fileID: 5881216147124710290, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1694102720}
+      objectReference: {fileID: 878670825}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.25
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -153808,7 +154150,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1664723904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1664723904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154042,6 +154396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_MixedCenter
       objectReference: {fileID: 0}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 374358872}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
       value: 2
@@ -155125,7 +155483,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1702940872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1702940872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155367,6 +155737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve_MixedUpperGate
       objectReference: {fileID: 0}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1357711903}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: valveHandle
       value: 
@@ -156657,7 +157031,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 92840689}
+      objectReference: {fileID: 838883955}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -156672,11 +157046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.25
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -156921,9 +157295,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -156937,7 +157311,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -157121,9 +157495,9 @@ MonoBehaviour:
   m_fontSize: 58
   m_fontSizeBase: 58
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 29
+  m_fontSizeMax: 58
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -157137,7 +157511,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -157493,7 +157867,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1767396974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1867697129}
+        m_TargetAssemblyTypeName: MechaBloom.TutorialManager, Assembly-CSharp
+        m_MethodName: Continue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1767396974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157619,9 +158005,9 @@ MonoBehaviour:
   m_fontSize: 22
   m_fontSizeBase: 22
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 11
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -157635,7 +158021,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -157798,8 +158184,12 @@ PrefabInstance:
       value: Gear_LimitedPivot
       objectReference: {fileID: 0}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1333730369}
+    - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: startQuarterTurns
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6563988068509443773, guid: 415372528028750468618d4c6563da6f, type: 3}
       propertyPath: renderers.Array.size
@@ -157998,9 +158388,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -158014,7 +158404,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -158262,7 +158652,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1735106849}
+      objectReference: {fileID: 831942773}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -158277,11 +158667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -158598,6 +158988,10 @@ PrefabInstance:
       value: EnergyCore_RootKey
       objectReference: {fileID: 0}
     - target: {fileID: 1374710926243681660, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 83824218}
+    - target: {fileID: 1374710926243681660, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
       propertyPath: startsActive
       value: 0
       objectReference: {fileID: 0}
@@ -158875,7 +159269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1796915321}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1629166314}
+        m_TargetAssemblyTypeName: MechaBloom.UndoManager, Assembly-CSharp
+        m_MethodName: UndoLastAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1796915321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158943,8 +159349,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -159161,9 +159567,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -159177,7 +159583,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -159608,6 +160014,10 @@ PrefabInstance:
       value: Valve_EnergyGate
       objectReference: {fileID: 0}
     - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 31100841}
+    - target: {fileID: 1011670075807918868, guid: 3ebbdf5b69a985844a3efb0b0cb6ba1e, type: 3}
       propertyPath: valveHandle
       value: 
       objectReference: {fileID: 1811711149}
@@ -159760,7 +160170,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1813877061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1813877061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160596,6 +161018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyCore_GreenFlow
       objectReference: {fileID: 0}
+    - target: {fileID: 1374710926243681660, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 900490285}
     - target: {fileID: 1746832760228857275, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -161240,9 +161666,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -161256,7 +161682,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -161593,6 +162019,7 @@ MonoBehaviour:
   uiManager: {fileID: 658916693}
   tutorialMessageText: {fileID: 585524204}
   saveManager: {fileID: 1889141174}
+  audioManager: {fileID: 1258100684}
 --- !u!1 &1869815387
 GameObject:
   m_ObjectHideFlags: 0
@@ -161869,9 +162296,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -161885,7 +162312,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -161931,6 +162358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyCore_FinalKey
       objectReference: {fileID: 0}
+    - target: {fileID: 1374710926243681660, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 2078810841}
     - target: {fileID: 1746832760228857275, guid: 8ddedcf34bcb58f4389a7a5b40a478f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -162080,7 +162511,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1872837496}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1872837496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162694,9 +163137,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -162710,7 +163153,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -162860,7 +163303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1888084401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1888084401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163030,9 +163485,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -163046,7 +163501,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -163295,9 +163750,9 @@ MonoBehaviour:
   m_fontSize: 26
   m_fontSizeBase: 26
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 13
+  m_fontSizeMax: 26
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -163311,7 +163766,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -164045,9 +164500,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -164061,7 +164516,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -164498,9 +164953,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -164514,7 +164969,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -165000,9 +165455,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -165016,7 +165471,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -165262,7 +165717,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1945054008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1945054008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165511,7 +165978,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1947725918}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1947725918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166059,9 +166538,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -166075,7 +166554,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -166196,9 +166675,9 @@ MonoBehaviour:
   m_fontSize: 54
   m_fontSizeBase: 54
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 27
+  m_fontSizeMax: 54
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -166212,7 +166691,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -168428,12 +168907,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: c7f70e83f31c37846baad4e4f61b50e3, type: 2}
     - target: {fileID: 2787141739783785042, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1945282961}
+    - target: {fileID: 2787141739783785042, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: normalMaterial
       value: 
       objectReference: {fileID: 2100000, guid: c7f70e83f31c37846baad4e4f61b50e3, type: 2}
     - target: {fileID: 2787141739783785042, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: startQuarterTurns
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2787141739783785042, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: renderers.Array.size
@@ -168797,9 +169280,9 @@ MonoBehaviour:
   m_fontSize: 18
   m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -168813,7 +169296,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -169383,7 +169866,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2061307263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1459056258}
+        m_TargetAssemblyTypeName: MechaBloom.GameManager, Assembly-CSharp
+        m_MethodName: QuitForEditorTesting
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2061307263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174766,6 +175261,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: c7f70e83f31c37846baad4e4f61b50e3, type: 2}
     - target: {fileID: 2787141739783785042, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 2114933948}
+    - target: {fileID: 2787141739783785042, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: normalMaterial
       value: 
       objectReference: {fileID: 2100000, guid: c7f70e83f31c37846baad4e4f61b50e3, type: 2}
@@ -174787,7 +175286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3231984211648215823, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3231984211648215823, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: m_LocalPosition.y
@@ -174795,7 +175294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3231984211648215823, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3231984211648215823, guid: 766742de1ad6702438572d95a5b22c82, type: 3}
       propertyPath: m_LocalRotation.w
@@ -181027,15 +181526,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3848598521596571314, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -181076,7 +181575,7 @@ PrefabInstance:
     - target: {fileID: 9002255045954760572, guid: 2f38705f2d5c2cb4c9c5de5358c4962b, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1573588130}
+      objectReference: {fileID: 442708408}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -181182,7 +181681,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2091105244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73966447}
+        m_TargetAssemblyTypeName: MechaBloom.LevelSelectUI, Assembly-CSharp
+        m_MethodName: SelectLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2091105244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181308,9 +181819,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 14
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -181324,7 +181835,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -181674,7 +182185,7 @@ PrefabInstance:
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 1644873999}
+      objectReference: {fileID: 29316614}
     - target: {fileID: 909990570786392776, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: renderers.Array.size
       value: 2
@@ -181689,15 +182200,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6591196124923937885, guid: 4c3fbebf453113a4eb533c0038c8be43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -187524,18 +188035,18 @@ PrefabInstance:
     - target: {fileID: 5881216147124710290, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: tile
       value: 
-      objectReference: {fileID: 583434070}
+      objectReference: {fileID: 3732211}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5897206926058374669, guid: e2ebe0dc9a52d6d47a3f7375561ebf4e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -187876,7 +188387,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2131265244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1867697129}
+        m_TargetAssemblyTypeName: MechaBloom.TutorialManager, Assembly-CSharp
+        m_MethodName: Skip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2131265244
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -51,6 +51,7 @@ namespace MechaBloom
             levelCompleteSummaryText?.SetText(summary);
             SetActive(gameOverPanel, false);
             SetActive(pausePanel, false);
+            SetActive(tutorialPanel, false);
             SetActive(levelCompletePanel, true);
         }
 
@@ -59,6 +60,7 @@ namespace MechaBloom
             failureReasonText?.SetText(reason);
             SetActive(levelCompletePanel, false);
             SetActive(pausePanel, false);
+            SetActive(tutorialPanel, false);
             SetActive(gameOverPanel, true);
         }
 

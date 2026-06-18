@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-18 - Functional QA, UI wiring, audio, and level tuning
+
+- **Change summary:** Completed a prompt-wide functional pass for MechaBloom 3D. Wired all 42 manually placed UI buttons, settings sliders, vibration toggle, tutorial buttons, mobile controls, menu navigation, restart/next/retry/main-menu flows, and AudioManager clip references. Added self-authored placeholder WAV music/SFX, switched mobile orientation to landscape-only, enabled TMP auto-sizing/wrapping, tuned Levels 07-12 plus Level 05 splitter output/tile references, and fixed unlocked roots so they act as pass-through root channels.
+- **Files / systems touched:** `Assets/Scenes/GameScene.unity`, `Assets/Audio/*.wav`, `Assets/Scripts/FlowPathCalculator.cs`, `GameManager.cs`, `LevelManager.cs`, `SaveManager.cs`, `TouchInputController.cs`, `TutorialManager.cs`, `UIManager.cs`, `ProjectSettings/ProjectSettings.asset`, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`, `LICENSE_NOTES.md`, `ATTRIBUTION.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: C# compilation has 0 errors; scene is saved/not dirty; 42/42 buttons have persistent OnClick events; settings sliders/toggle are wired; exactly 3 AudioSources and 1 AudioListener exist; all AudioManager clip slots are assigned; Main Camera remains orthographic at `(8, 12, -8)` rotation `(55, 45, 0)`; Canvas Scaler is Scale With Screen Size at 1920x1080 with SafeAreaHandler; all 93 TMP texts auto-size; project orientation is LandscapeLeft with portrait autorotation disabled; 0 missing scripts; forbidden scan found no disallowed runtime creation/search APIs in `Assets/Scripts`; Play Mode solver found valid solutions for all 12 levels.
+- **Known risks:** Automated solver QA does not replace hands-on mobile device QA. Levels 01, 04, and 05 are no-action tutorial/demo boards that auto-complete when initial flow satisfies the objective. Current audio is self-authored placeholder tone/loop audio for testing, not final production sound design.
+- **Next planned step:** Run real-device Android/iPhone landscape QA and tune presentation/audio balance from hands-on feedback.
+
+---
+
 ## 2026-06-12 - Gameplay systems integration
 
 - **Change summary:** Implemented the main MechaBloom 3D gameplay layer against existing scene objects: routed water/energy flow, splitter routing, blocker/locked-root checks, plant blooming, action limits, win/loss handling, undo snapshots, hints, PlayerPrefs saves/unlocks/stars, touch/mouse selection, mobile Rotate/Activate hooks, UI updates, and audio trigger calls.

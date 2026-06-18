@@ -1,6 +1,6 @@
 # MEMORY_BANK.md — MechaBloom 3D
 
-> Living reference. Updated after every important change. Last updated: **2026-06-12**.
+> Living reference. Updated after every important change. Last updated: **2026-06-18**.
 
 ---
 
@@ -80,7 +80,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Gameplay systems integration complete.
+**Phase:** Functional QA and polish pass complete.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
@@ -95,22 +95,24 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - [x] Gameplay material set and primitive prefab set created under `Assets/Materials/` and `Assets/Prefabs/`.
 - [x] `Level_01` through `Level_12` manually built in `GameScene.unity` with LevelConfig objective, hint, tutorial text, and mechanic-specific scene objects.
 - [x] Gameplay systems integrated against existing scene objects: routed water/energy flow, splitters, blockers, plant blooming, win/loss, undo, hints, save/unlock, stars, touch/mobile input, UI, and audio hooks.
-- [ ] Full per-level puzzle tuning and play-mode QA.
-- [ ] Real placeholder audio clips.
+- [x] Manual UI buttons, settings sliders, vibration toggle, menu navigation, tutorial buttons, level complete/game over buttons, and mobile controls are wired through Inspector persistent events.
+- [x] Landscape-only mobile orientation is configured; Canvas Scaler remains 1920x1080 Scale With Screen Size, SafeAreaHandler is present, and all TMP text is set to auto-size/wrap.
+- [x] Self-authored placeholder WAV audio clips are committed and wired to `AudioManager`; `MusicSource`, `SFXSource`, and `UISFXSource` are the only scene AudioSources.
+- [x] Play Mode solver smoke test found valid solutions for Level_01 through Level_12 under the implemented flow rules.
 
 ## KNOWN ISSUES
 
-- Flow calculation now traverses existing level tiles and objects, but the puzzle layouts still need full play-mode tuning for intended difficulty and solvability.
-- Gears use a quarter-turn elbow connection model; some existing manually placed boards may need orientation/layout adjustment after hands-on QA.
-- Locked roots unlock when an energy-required plant blooms, then flow recalculates through existing roots.
+- Automated MCP smoke tests pass, but hands-on device QA is still needed on real Android/iPhone aspect ratios, safe areas, speakers, and touch input.
+- Gears use a quarter-turn elbow connection model; level layouts are tuned to that model.
+- Locked roots unlock when an energy-required plant blooms, then flow recalculates through existing roots; unlocked roots now act as pass-through root channels.
 - Undo restores gear, valve, energy core, plant, locked root, action, energy, wrong-action, and hint state from an in-memory stack.
-- Level 01's direct tutorial route can bloom without a player action; confirm whether this should remain an automatic teaching moment or be adjusted with an interactable.
+- Level 01, Level 04, and Level 05 are no-action tutorial/demo boards; they auto-complete if the initial flow already satisfies the objective.
 - Gameplay prefabs exist as reusable primitive-based assets, but they have not yet replaced/tuned every scene-level object.
-- Real CC0 audio files are not added yet; the scene uses documented AudioSource placeholders.
+- Current audio is self-authored placeholder WAV tone/loop audio for testing; replace or polish before store submission if higher production value is desired.
 
 ## NEXT TASKS
 
-1. Run play-mode QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, and mobile safe area.
-2. Tune Level_01 through Level_12 object orientation/layout/action limits against the implemented gear/valve/splitter/locked-root rules.
-3. Add or generate documented CC0/self-authored placeholder audio clips and wire them to `AudioManager`.
-4. Polish UI button wiring and any missing mobile affordances discovered during play-mode QA.
+1. Run hands-on device QA for menu, level select, touch input, win/loss, save, stars, hint, undo, settings, audio balance, and mobile safe area.
+2. Polish difficulty and visual clarity, especially the no-action tutorial/demo levels if more interaction is desired.
+3. Replace or refine placeholder generated audio with polished CC0/self-authored sounds before release.
+4. Create Android/iOS test builds and verify performance, orientation, and touch targets on real devices.

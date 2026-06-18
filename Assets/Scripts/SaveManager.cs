@@ -61,10 +61,19 @@ namespace MechaBloom
         public void ResetProgress()
         {
             PlayerPrefs.DeleteKey(HighestUnlockedKey);
+            PlayerPrefs.DeleteKey(TutorialSeenKey);
             for (var i = 1; i <= 12; i++)
             {
                 PlayerPrefs.DeleteKey(GetStarsKey(i));
             }
+
+            PlayerPrefs.Save();
+        }
+
+        public void SetVibrationEnabled(bool enabled)
+        {
+            VibrationEnabled = enabled;
+            PlayerPrefs.Save();
         }
 
         private static string GetStarsKey(int levelNumber)

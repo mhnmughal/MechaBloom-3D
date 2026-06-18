@@ -10,6 +10,8 @@ namespace MechaBloom
         [SerializeField] private FeedbackTextUI feedbackTextUI;
         [SerializeField] private Transform selectionRing;
         [SerializeField] private AudioManager audioManager;
+        [SerializeField] private UndoManager undoManager;
+        [SerializeField] private GameManager gameManager;
 
         private InteractableObject selected;
 
@@ -117,6 +119,16 @@ namespace MechaBloom
             if (Input.GetKeyDown(KeyCode.A))
             {
                 ActivateSelected();
+            }
+
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                undoManager?.UndoLastAction();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                gameManager?.TogglePause();
             }
 #endif
         }

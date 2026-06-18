@@ -369,6 +369,18 @@ namespace MechaBloom
                 }
             }
 
+            if (lockedRoots.TryGetValue(position, out var root) && !root.Locked)
+            {
+                occupied = true;
+                foreach (GridDirection direction in System.Enum.GetValues(typeof(GridDirection)))
+                {
+                    if (direction != enteredFrom && !exits.Contains(direction))
+                    {
+                        exits.Add(direction);
+                    }
+                }
+            }
+
             return exits;
         }
 

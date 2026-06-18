@@ -7,6 +7,8 @@ namespace MechaBloom
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private UIManager uiManager;
         [SerializeField] private AudioManager audioManager;
+        [SerializeField] private SaveManager saveManager;
+        [SerializeField] private LevelSelectUI levelSelectUI;
 
         private bool paused;
 
@@ -19,9 +21,24 @@ namespace MechaBloom
 
         public void StartGame()
         {
+            ShowLevelSelect();
+        }
+
+        public void PlayFirstUnlockedLevel()
+        {
             paused = false;
             Time.timeScale = 1f;
             audioManager?.PlayUIButton();
+            var levelNumber = saveManager != null ? Mathf.Clamp(saveManager.HighestUnlockedLevel, 1, 12) : 1;
+            levelManager?.LoadLevel(levelNumber);
+        }
+
+        public void ShowLevelSelect()
+        {
+            paused = false;
+            Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
+            levelSelectUI?.Refresh();
             uiManager?.ShowLevelSelect();
         }
 
@@ -31,6 +48,46 @@ namespace MechaBloom
             Time.timeScale = 1f;
             audioManager?.PlayUIButton();
             uiManager?.ShowMainMenu();
+        }
+
+        public void OpenSettings()
+        {
+            paused = false;
+            Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
+            uiManager?.ShowSettings();
+        }
+
+        public void OpenCredits()
+        {
+            paused = false;
+            Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
+            uiManager?.ShowCredits();
+        }
+
+        public void RestartLevel()
+        {
+            paused = false;
+            Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
+            uiManager?.ShowGameplay();
+            levelManager?.RestartActiveLevel();
+        }
+
+        public void LoadNextLevel()
+        {
+            paused = false;
+            Time.timeScale = 1f;
+            audioManager?.PlayUIButton();
+            levelManager?.LoadNextLevel();
+        }
+
+        public void ResetProgress()
+        {
+            audioManager?.PlayUIButton();
+            saveManager?.ResetProgress();
+            levelSelectUI?.Refresh();
         }
 
         public void Pause()

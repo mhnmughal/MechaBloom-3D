@@ -1,4 +1,4 @@
-# ATTRIBUTION.md — MechaBloom 3D
+# ATTRIBUTION.md - MechaBloom 3D
 
 This file lists the exact credit text required by any external asset used in the project.
 
@@ -6,7 +6,7 @@ This file lists the exact credit text required by any external asset used in the
 
 > **No attribution-required external assets are currently used.**
 
-The project currently uses Unity default primitives, the TextMeshPro default font (SIL OFL — attribution **not** required), self-authored materials, and placeholder audio slots only.
+The project currently uses Unity default primitives, the TextMeshPro default font (SIL OFL - attribution **not** required), self-authored materials, and self-authored placeholder audio WAVs.
 
 ---
 
@@ -24,7 +24,7 @@ The CreditsPanel in the game displays:
 
 Add an entry here using this format, and also record the asset in `LICENSE_NOTES.md`:
 
-```
+```text
 ### <Asset name>
 - Author: <name>
 - Source: <URL>

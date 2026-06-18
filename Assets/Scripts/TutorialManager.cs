@@ -9,6 +9,7 @@ namespace MechaBloom
         [SerializeField] private UIManager uiManager;
         [SerializeField] private TMP_Text tutorialMessageText;
         [SerializeField] private SaveManager saveManager;
+        [SerializeField] private AudioManager audioManager;
 
         private int messageIndex;
 
@@ -27,12 +28,14 @@ namespace MechaBloom
 
         public void Continue()
         {
+            audioManager?.PlayUIButton();
             messageIndex++;
             ShowCurrentMessage();
         }
 
         public void Skip()
         {
+            audioManager?.PlayUIButton();
             if (saveManager != null)
             {
                 saveManager.TutorialSeen = true;
