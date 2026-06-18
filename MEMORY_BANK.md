@@ -88,7 +88,11 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 
 ## CURRENT PROJECT STATUS
 
-**Phase:** Functional QA and polish pass complete.
+**Phase:** Functional QA and polish pass complete; build scene list and background fixed.
+
+- [x] **Build scene list fixed:** `GameScene.unity` is enabled build index 0; empty `SampleScene.unity` is kept but disabled (was previously the only enabled scene, which would have shipped a blank scene).
+- [x] **Background added:** self-authored `MechaBloom/GradientSkybox` shader + `Skybox_MechaBloom` material bound to `RenderSettings.skybox` (deep blue zenith → teal horizon), replacing the flat empty backdrop.
+- [x] Orientation confirmed **landscape-only** (Player Settings autorotate = LandscapeLeft/Right only); the board + bottom mobile control row are designed for landscape.
 
 - [x] Private GitHub repo `mhnmughal/MechaBloom-3D` (verified PRIVATE).
 - [x] Unity project present (6000.4.6f1, URP), Unity .gitignore in place.
