@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace MechaBloom
 {
@@ -89,21 +90,18 @@ namespace MechaBloom
                 return;
             }
 
-            if (Input.touchCount > 0)
+            var touchscreen = Touchscreen.current;
+            if (touchscreen != null && touchscreen.primaryTouch.press.wasPressedThisFrame)
             {
-                var touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
-                {
-                    TrySelectAt(touch.position);
-                }
-
+                TrySelectAt(touchscreen.primaryTouch.position.ReadValue());
                 return;
             }
 
 #if UNITY_EDITOR || UNITY_STANDALONE
-            if (Input.GetMouseButtonDown(0))
+            var mouse = Mouse.current;
+            if (mouse != null && mouse.leftButton.wasPressedThisFrame)
             {
-                TrySelectAt(Input.mousePosition);
+                TrySelectAt(mouse.position.ReadValue());
             }
 #endif
         }
@@ -111,22 +109,28 @@ namespace MechaBloom
         private void HandleEditorShortcuts()
         {
 #if UNITY_EDITOR || UNITY_STANDALONE
-            if (Input.GetKeyDown(KeyCode.R))
+            var keyboard = Keyboard.current;
+            if (keyboard == null)
+            {
+                return;
+            }
+
+            if (keyboard.rKey.wasPressedThisFrame)
             {
                 RotateSelected();
             }
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (keyboard.aKey.wasPressedThisFrame)
             {
                 ActivateSelected();
             }
 
-            if (Input.GetKeyDown(KeyCode.U))
+            if (keyboard.uKey.wasPressedThisFrame)
             {
                 undoManager?.UndoLastAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (keyboard.escapeKey.wasPressedThisFrame)
             {
                 gameManager?.TogglePause();
             }

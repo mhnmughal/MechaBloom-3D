@@ -46,6 +46,8 @@ All UI is hand-built under `UI > Canvas`. Canvas: Screen Space Overlay, Canvas S
 
 ## 8. Audio and Licence Rules
 
+Input System note: the manual EventSystem must use `InputSystemUIInputModule` with `InputSystem_Actions`; `StandaloneInputModule` is not allowed because Player Settings are Input System-only.
+
 `Audio` parent holds `MusicSource`, `SFXSource`, `UISFXSource` (created manually). `AudioManager` references them + AudioClips via `[SerializeField]`; never creates AudioSources at runtime; separates music/SFX volume; saves volume in PlayerPrefs. Only commercial-free audio (CC0 / Kenney / OpenGameArt CC0 / Freesound CC0 / self-made placeholders). Missing real audio → named placeholder slots documented in `LICENSE_NOTES.md`. All assets tracked in `LICENSE_NOTES.md` / `ATTRIBUTION.md`.
 
 ## 9. Level Design Rules
@@ -61,6 +63,8 @@ Clean modular C# in `Assets/Scripts/`. `[SerializeField] private` for scene refs
 `TouchInputController` raycasts from the existing Main Camera; works on Android + iOS; selects interactables (all have colliders); shows `SelectionRing` on selection; invalid taps give feedback. On-screen `MobileControlsPanel` buttons: Rotate, Activate, Undo, Restart, Pause, Hint — wired to public methods via Inspector. Editor shortcuts R/A/U/Esc for testing. Touch is primary.
 
 ## 12. Save System Rules
+
+Input implementation note: `TouchInputController` uses `UnityEngine.InputSystem` touchscreen, mouse, and keyboard APIs only; do not reintroduce legacy `UnityEngine.Input` calls.
 
 PlayerPrefs keys: highest unlocked level, stars per level, music volume, SFX volume, vibration placeholder, tutorial-seen flag. `SaveManager` is the single owner of these keys.
 
@@ -99,6 +103,7 @@ See the full checklist in this file's companion section below and `DEVELOPMENT_L
 - [x] Landscape-only mobile orientation is configured; Canvas Scaler remains 1920x1080 Scale With Screen Size, SafeAreaHandler is present, and all TMP text is set to auto-size/wrap.
 - [x] Self-authored placeholder WAV audio clips are committed and wired to `AudioManager`; `MusicSource`, `SFXSource`, and `UISFXSource` are the only scene AudioSources.
 - [x] Play Mode solver smoke test found valid solutions for Level_01 through Level_12 under the implemented flow rules.
+- [x] Input System-only runtime path verified: `TouchInputController` uses `UnityEngine.InputSystem`, and the manual EventSystem uses `InputSystemUIInputModule` with no `StandaloneInputModule`.
 
 ## KNOWN ISSUES
 

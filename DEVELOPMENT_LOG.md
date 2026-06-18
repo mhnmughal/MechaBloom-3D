@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-18 - Input System runtime exception fix
+
+- **Change summary:** Fixed the Input System-only runtime errors reported in Play Mode. Replaced legacy `UnityEngine.Input` calls in `TouchInputController` with `UnityEngine.InputSystem` touchscreen, mouse, and keyboard APIs. Updated the manually placed `GameScene/UI/EventSystem` from `StandaloneInputModule` to `InputSystemUIInputModule` wired to `Assets/InputSystem_Actions.inputactions`.
+- **Files / systems touched:** `Assets/Scripts/TouchInputController.cs`, `Assets/Scenes/GameScene.unity`, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: Unity compilation has 0 errors; `GameScene/UI/EventSystem` has 0 `StandaloneInputModule` components and 1 `InputSystemUIInputModule`; Play Mode smoke check reports 0 console errors after startup; script scan finds no legacy `UnityEngine.Input` usage in `Assets/Scripts`.
+- **Known risks:** Hands-on device QA is still recommended for real touch behavior across Android/iPhone screen sizes.
+- **Next planned step:** Continue device QA and polish passes once the input regression is confirmed on target hardware.
+
+---
+
 ## 2026-06-18 - Functional QA, UI wiring, audio, and level tuning
 
 - **Change summary:** Completed a prompt-wide functional pass for MechaBloom 3D. Wired all 42 manually placed UI buttons, settings sliders, vibration toggle, tutorial buttons, mobile controls, menu navigation, restart/next/retry/main-menu flows, and AudioManager clip references. Added self-authored placeholder WAV music/SFX, switched mobile orientation to landscape-only, enabled TMP auto-sizing/wrapping, tuned Levels 07-12 plus Level 05 splitter output/tile references, and fixed unlocked roots so they act as pass-through root channels.
