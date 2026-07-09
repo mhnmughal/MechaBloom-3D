@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace MechaBloom
@@ -42,7 +44,7 @@ namespace MechaBloom
         {
             if (selected == null)
             {
-                feedbackTextUI?.Show("Select a valve or core first.");
+                feedbackTextUI?.Show("Select an activatable object first.");
                 return;
             }
 
@@ -93,7 +95,12 @@ namespace MechaBloom
             var touchscreen = Touchscreen.current;
             if (touchscreen != null && touchscreen.primaryTouch.press.wasPressedThisFrame)
             {
-                TrySelectAt(touchscreen.primaryTouch.position.ReadValue());
+                var touchPosition = touchscreen.primaryTouch.position.ReadValue();
+                if (!IsScreenPositionOverUI(touchPosition))
+                {
+                    TrySelectAt(touchPosition);
+                }
+
                 return;
             }
 
@@ -101,7 +108,11 @@ namespace MechaBloom
             var mouse = Mouse.current;
             if (mouse != null && mouse.leftButton.wasPressedThisFrame)
             {
-                TrySelectAt(mouse.position.ReadValue());
+                var mousePosition = mouse.position.ReadValue();
+                if (!IsScreenPositionOverUI(mousePosition))
+                {
+                    TrySelectAt(mousePosition);
+                }
             }
 #endif
         }
@@ -151,6 +162,22 @@ namespace MechaBloom
             }
 
             ClearSelection();
+        }
+
+        private static bool IsScreenPositionOverUI(Vector2 screenPosition)
+        {
+            if (EventSystem.current == null)
+            {
+                return false;
+            }
+
+            var eventData = new PointerEventData(EventSystem.current)
+            {
+                position = screenPosition
+            };
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventData, results);
+            return results.Count > 0;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace MechaBloom
     public sealed class LandscapeCanvasLayout : MonoBehaviour
     {
         private static readonly Color PanelColor = new(0.035f, 0.055f, 0.06f, 0.9f);
-        private static readonly Color HudColor = new(0.02f, 0.03f, 0.035f, 0.74f);
+        private static readonly Color TransparentContainerColor = new(0f, 0f, 0f, 0f);
         private static readonly Color ButtonColor = new(0.92f, 0.72f, 0.25f, 0.96f);
         private static readonly Color SecondaryButtonColor = new(0.18f, 0.48f, 0.44f, 0.94f);
         private static readonly Color TextColor = new(0.92f, 0.98f, 0.9f, 1f);
@@ -106,9 +106,10 @@ namespace MechaBloom
             Stretch("CreditsPanel");
             Stretch("TutorialPanel");
 
+            Place("TitleScreen/GameLogoImage", new Vector2(0.5f, 0.68f), new Vector2(1180f, 360f));
             Place("TitleScreen/TitleText", new Vector2(0.5f, 0.68f), new Vector2(980f, 148f));
-            Place("TitleScreen/SubtitleText", new Vector2(0.5f, 0.52f), new Vector2(900f, 78f));
-            Place("TitleScreen/StartButton", new Vector2(0.5f, 0.33f), new Vector2(420f, 104f));
+            Place("TitleScreen/SubtitleText", new Vector2(0.5f, 0.43f), new Vector2(900f, 78f));
+            Place("TitleScreen/StartButton", new Vector2(0.5f, 0.25f), new Vector2(420f, 104f));
 
             Place("MainMenuPanel/TitleText", new Vector2(0.29f, 0.66f), new Vector2(640f, 132f));
             Place("MainMenuPanel/PlayButton", new Vector2(0.72f, 0.68f), new Vector2(380f, 92f));
@@ -119,6 +120,7 @@ namespace MechaBloom
             LayoutGameplayHud();
             LayoutMobileControls();
             LayoutLevelSelect();
+            LayoutSettings();
         }
 
         private void LayoutGameplayHud()
@@ -149,10 +151,12 @@ namespace MechaBloom
             }
 
             Stretch(controls);
-            Place("MobileControlsPanel/RotateButton", new Vector2(0.76f, 0.13f), new Vector2(180f, 88f));
-            Place("MobileControlsPanel/ActivateButton", new Vector2(0.88f, 0.13f), new Vector2(180f, 88f));
-            Place("MobileControlsPanel/UndoButton", new Vector2(0.12f, 0.13f), new Vector2(150f, 82f));
-            Place("MobileControlsPanel/HintButton", new Vector2(0.23f, 0.13f), new Vector2(150f, 82f));
+            Place("MobileControlsPanel/UndoButton", new Vector2(0.1f, 0.085f), new Vector2(210f, 92f));
+            Place("MobileControlsPanel/HintButton", new Vector2(0.26f, 0.085f), new Vector2(210f, 92f));
+            Place("MobileControlsPanel/RotateSelectedButton", new Vector2(0.42f, 0.085f), new Vector2(210f, 92f));
+            Place("MobileControlsPanel/ActivateSelectedButton", new Vector2(0.58f, 0.085f), new Vector2(210f, 92f));
+            Place("MobileControlsPanel/RestartButton", new Vector2(0.74f, 0.085f), new Vector2(210f, 92f));
+            Place("MobileControlsPanel/PauseButton", new Vector2(0.9f, 0.085f), new Vector2(210f, 92f));
         }
 
         private void LayoutLevelSelect()
@@ -182,6 +186,27 @@ namespace MechaBloom
             }
         }
 
+        private void LayoutSettings()
+        {
+            Place("SettingsPanel/SettingsTitle", new Vector2(0.5f, 0.78f), new Vector2(760f, 96f));
+            Place("SettingsPanel/MusicLabel", new Vector2(0.29f, 0.61f), new Vector2(300f, 68f));
+            Place("SettingsPanel/MusicMinusButton", new Vector2(0.43f, 0.61f), new Vector2(72f, 72f));
+            Place("SettingsPanel/MusicVolumeSlider", new Vector2(0.56f, 0.61f), new Vector2(360f, 56f));
+            Place("SettingsPanel/MusicPlusButton", new Vector2(0.69f, 0.61f), new Vector2(72f, 72f));
+            Place("SettingsPanel/MusicValueText", new Vector2(0.76f, 0.61f), new Vector2(120f, 60f));
+            Place("SettingsPanel/SFXLabel", new Vector2(0.29f, 0.5f), new Vector2(300f, 68f));
+            Place("SettingsPanel/SfxMinusButton", new Vector2(0.43f, 0.5f), new Vector2(72f, 72f));
+            Place("SettingsPanel/SFXVolumeSlider", new Vector2(0.56f, 0.5f), new Vector2(360f, 56f));
+            Place("SettingsPanel/SfxPlusButton", new Vector2(0.69f, 0.5f), new Vector2(72f, 72f));
+            Place("SettingsPanel/SfxValueText", new Vector2(0.76f, 0.5f), new Vector2(120f, 60f));
+            Place("SettingsPanel/VibrationLabel", new Vector2(0.42f, 0.39f), new Vector2(300f, 68f));
+            Place("SettingsPanel/VibrationToggle", new Vector2(0.58f, 0.39f), new Vector2(72f, 72f));
+            Place("SettingsPanel/VibrationPlaceholderToggle", new Vector2(0.58f, 0.39f), new Vector2(72f, 72f));
+            Place("SettingsPanel/ResetProgressButton", new Vector2(0.5f, 0.27f), new Vector2(380f, 80f));
+            Place("SettingsPanel/BackButton", new Vector2(0.5f, 0.15f), new Vector2(260f, 74f));
+        }
+
+
         private void StyleImages()
         {
             foreach (var image in GetComponentsInChildren<Image>(true))
@@ -197,9 +222,20 @@ namespace MechaBloom
                         ? SecondaryButtonColor
                         : ButtonColor;
                 }
-                else if (image.gameObject.name.Contains("HUD") || image.gameObject.name.Contains("Panel"))
+                else if (image.gameObject.name == "GameplayHUD" || image.gameObject.name == "MobileControlsPanel")
                 {
-                    image.color = image.gameObject.name.Contains("Gameplay") ? HudColor : PanelColor;
+                    image.color = TransparentContainerColor;
+                    image.raycastTarget = false;
+                }
+                else if (image.gameObject.name == "GameLogoImage")
+                {
+                    image.color = Color.white;
+                    image.raycastTarget = false;
+                    image.preserveAspect = true;
+                }
+                else if (image.gameObject.name.Contains("Panel"))
+                {
+                    image.color = PanelColor;
                 }
             }
         }

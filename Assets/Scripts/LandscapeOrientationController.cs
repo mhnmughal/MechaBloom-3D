@@ -6,6 +6,7 @@ namespace MechaBloom
     {
         [SerializeField] private ScreenOrientation preferredOrientation = ScreenOrientation.LandscapeLeft;
         [SerializeField] private bool allowBothLandscapeDirections = true;
+        [SerializeField, Range(30, 120)] private int targetFrameRate = 60;
 
         private void Awake()
         {
@@ -24,6 +25,8 @@ namespace MechaBloom
             Screen.autorotateToLandscapeLeft = true;
             Screen.autorotateToLandscapeRight = allowBothLandscapeDirections;
             Screen.orientation = preferredOrientation;
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = targetFrameRate;
         }
     }
 }
