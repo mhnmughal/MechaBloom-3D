@@ -4,6 +4,16 @@ Chronological log. Newest entries at the top. Each commit adds: date, change sum
 
 ---
 
+## 2026-06-18 - Build scene list fix, gradient background, play-mode QA
+
+- **Change summary:** Resolved the audit's critical build issue and added a proper background. `EditorBuildSettings` now ships `Assets/Scenes/GameScene.unity` as enabled build index 0, with the empty template `SampleScene.unity` kept but disabled so it can never boot as the shipped scene. Added a self-authored `MechaBloom/GradientSkybox` shader and `Skybox_MechaBloom` material (deep night-blue zenith → soft teal horizon glow) assigned to the scene's `RenderSettings.skybox`, replacing the flat empty backdrop behind the isometric board. Committed the pending URP `_Color`/`_BaseColor` material sync edits.
+- **Files / systems touched:** `ProjectSettings/EditorBuildSettings.asset`, `Assets/Shaders/GradientSkybox.shader`, `Assets/Materials/Skybox_MechaBloom.mat`, `Assets/Scenes/GameScene.unity` (skybox lighting), 12 `Assets/Materials/*.mat` colour-sync edits, `MEMORY_BANK.md`, `DEVELOPMENT_LOG.md`, `CHANGELOG.md`, `LICENSE_NOTES.md`.
+- **Testing status:** Verified through AnkleBreaker Unity MCP: build scene list is `GameScene (enabled), SampleScene (disabled)`; gradient skybox shader compiles and is bound to `RenderSettings.skybox`; entered Play Mode with 0 compilation errors and 0 console errors; confirmed exactly one scene `LevelManager` and `GameManager`; `levels[0..11]` map 1:1 to `Level_01..Level_12`; `LoadLevel(1)` loads "Level 01 - Tutorial" and auto-completes (documented no-action board); `LoadLevel(2)` loads interactive "Level 02 - Gear Rotation" (actionLimit 8, requiredBloom 1, complete=false); Title→MainMenu→Play→level button flow is correctly wired; captured main menu and gameplay in both portrait preview and 1920×1080 landscape — UI and board render over the new skybox.
+- **Known risks:** Orientation ships landscape-only (Player Settings); the editor Game View may still default to a tall Free Aspect that misframes the preview — set the Game View to a 16:9 landscape size when reviewing. Real-device Android/iPhone safe-area QA still pending. Audio remains self-authored placeholder.
+- **Next planned step:** Hands-on landscape device QA and final audio/presentation polish.
+
+---
+
 ## 2026-06-18 - Responsive HUD and camera framing fix
 
 - **Change summary:** Fixed the bad Game View presentation reported from a tall Free Aspect editor window. Corrected the Main Camera yaw so it faces the manually placed level boards, set orthographic size to 11, recentered the offset manual Level_07 through Level_12 parents, converted gameplay HUD text and mobile control buttons to responsive anchors, and disabled duplicate HUD action buttons so the mobile control row owns all gameplay actions.

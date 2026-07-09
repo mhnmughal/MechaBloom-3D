@@ -18,6 +18,7 @@ All notable changes to this project are documented here. Format loosely follows 
 - Self-authored placeholder WAV audio for UI clicks, selection, gear/valve actions, water/energy flow, plants, wrong/blocked actions, undo, hint, level complete, game over, star reward, and background music.
 - Persistent Inspector wiring for all manually placed UI buttons, settings sliders, vibration toggle, tutorial controls, mobile controls, level navigation, pause, retry, restart, and next-level actions.
 - Play Mode solver verification for all 12 manually placed levels.
+- Self-authored `MechaBloom/GradientSkybox` shader and `Skybox_MechaBloom` material providing a cosy-futuristic gradient background behind the isometric board.
 
 ### Changed
 - Advanced the project from documentation-only foundation to a compiled Unity scene/script foundation.
@@ -28,6 +29,7 @@ All notable changes to this project are documented here. Format loosely follows 
 - Reframed the Main Camera to face the manual level boards and converted gameplay HUD/mobile controls to responsive anchored layouts.
 
 ### Fixed
+- **Build scene list:** added `GameScene.unity` as enabled build index 0 and disabled the empty `SampleScene.unity`, which had been the only enabled build scene (a build would otherwise have shipped a blank template scene).
 - Resolved Play Mode `InvalidOperationException` errors caused by legacy `UnityEngine.Input` reads while Player Settings are set to Input System-only.
 - Fixed clipped/off-screen gameplay presentation in tall editor Free Aspect views by recentering offset manual levels and removing fixed-width bottom button overlap.
 
