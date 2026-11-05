@@ -1,0 +1,11 @@
+[mcp_servers.unity-mcp]
+command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
+args = ["/Users/mehranmughal/Documents/Game Development/MechaBloom 3D/Tools/unity-mcp-server/src/index.js"]
+
+[mcp_servers.unity-mcp.env]
+UNITY_HUB_PATH = "/Applications/Unity Hub.app/Contents/MacOS/Unity Hub"
+UNITY_BRIDGE_HOST = "127.0.0.1"
+UNITY_BRIDGE_PORT = "7890"
+
+[mcp_servers.unity-mcp.tools.unity_get_compilation_errors]
+approval_mode = "approve"

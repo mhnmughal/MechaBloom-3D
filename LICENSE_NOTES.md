@@ -50,6 +50,7 @@ All committed SFX are self-authored/generated placeholder WAV tones created loca
 |-------|--------|--------|---------|----------------|----------------------|-------|
 | MechaBloom 3D solid-colour URP materials | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Yes | No | Includes floor, tile, gear, pipe, valve, water, energy, plant, blocker, splitter, core, and UI panel materials. |
 | Gameplay material set (`Gear_Brass`, `Gear_Selected`, `Pipe_Metal`, `Pipe_WaterActive`, `Pipe_Inactive`, `Valve_Open`, `Valve_Closed`, `Water_Blue`, `Energy_Green`, `Energy_Yellow`, `PlantBed_Empty`, `PlantBed_Growing`, `PlantBed_Bloomed`, `Core_Active`, `Core_Inactive`, `Blocker_Stone`, `Splitter_Metal`) | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Yes | No | Solid-colour/emissive Unity materials only; no texture imports. |
+| `Skybox_MechaBloom` material + `MechaBloom/GradientSkybox` shader | Self-authored in Unity Editor | Project developer | Project-owned placeholder | Yes | No | Procedural vertical-gradient skybox (no textures); used as the scene background. |
 
 ## Models / Prefabs
 

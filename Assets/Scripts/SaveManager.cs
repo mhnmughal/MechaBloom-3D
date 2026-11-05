@@ -19,13 +19,21 @@ namespace MechaBloom
         public float MusicVolume
         {
             get => PlayerPrefs.GetFloat(MusicVolumeKey, 0.7f);
-            set => PlayerPrefs.SetFloat(MusicVolumeKey, Mathf.Clamp01(value));
+            set
+            {
+                PlayerPrefs.SetFloat(MusicVolumeKey, Mathf.Clamp01(value));
+                PlayerPrefs.Save();
+            }
         }
 
         public float SfxVolume
         {
             get => PlayerPrefs.GetFloat(SfxVolumeKey, 0.8f);
-            set => PlayerPrefs.SetFloat(SfxVolumeKey, Mathf.Clamp01(value));
+            set
+            {
+                PlayerPrefs.SetFloat(SfxVolumeKey, Mathf.Clamp01(value));
+                PlayerPrefs.Save();
+            }
         }
 
         public bool VibrationEnabled
